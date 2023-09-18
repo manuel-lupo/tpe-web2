@@ -2,6 +2,7 @@
 Aplicacion web de reseñas de discos
 
 Integrantes:
+  
   -Gianluca Merendino, e-mail: gianlucamerendino21@gmail.com
   
   -Manuel Agustin Lupo, email: mlupo@alumnos.exa.unicen.edu.ar
