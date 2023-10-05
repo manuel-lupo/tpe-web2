@@ -17,7 +17,8 @@ Descripción de la tematica:
 
    -La relacion principal 1 a N de nuestro TPE es la tabla Albums con la tabla Songs, en la que cada Album puede tener varias canciones
 
-    Archivo .pdf diagrama de entidad relación (DER):
 
-https://drive.google.com/file/d/1QYGYr_onRTK1gISgBpoxzacuGwNd67v6/view?usp=sharing
+Archivo .pdf diagrama de entidad relación (DER):
+
+https://drive.google.com/file/d/1IXMGGRsQEzEg30eGXfSWHbIrm-rwv14U/view?usp=sharing
 

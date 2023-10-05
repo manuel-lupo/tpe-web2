@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 20, 2023 at 08:01 PM
+-- Generation Time: Oct 05, 2023 at 05:54 PM
 -- Server version: 8.0.34-0ubuntu0.22.04.1
 -- PHP Version: 8.1.2-1ubuntu2.14
 
@@ -32,35 +32,9 @@ CREATE TABLE `Albums` (
   `title` varchar(45) NOT NULL,
   `rel_date` datetime DEFAULT NULL,
   `review` text NOT NULL,
-  `artist_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Artists`
---
-
-CREATE TABLE `Artists` (
-  `id` int NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `nationality` varchar(45) DEFAULT NULL,
-  `birthday` datetime DEFAULT NULL,
-  `description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Comments`
---
-
-CREATE TABLE `Comments` (
-  `id` int NOT NULL,
-  `user_id` int NOT NULL,
-  `comment` tinytext NOT NULL,
-  `rating` int NOT NULL,
-  `album_id` int NOT NULL
+  `artist` varchar(255) DEFAULT NULL,
+  `genre` varchar(255) DEFAULT NULL,
+  `rating` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -85,7 +59,8 @@ CREATE TABLE `Songs` (
 CREATE TABLE `Users` (
   `id` int NOT NULL,
   `name` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -96,22 +71,7 @@ CREATE TABLE `Users` (
 -- Indexes for table `Albums`
 --
 ALTER TABLE `Albums`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `artist_id` (`artist_id`);
-
---
--- Indexes for table `Artists`
---
-ALTER TABLE `Artists`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `Comments`
---
-ALTER TABLE `Comments`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `album_id` (`album_id`);
 
 --
 -- Indexes for table `Songs`
@@ -138,18 +98,6 @@ ALTER TABLE `Albums`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `Artists`
---
-ALTER TABLE `Artists`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `Comments`
---
-ALTER TABLE `Comments`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `Songs`
 --
 ALTER TABLE `Songs`
@@ -164,19 +112,6 @@ ALTER TABLE `Users`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `Albums`
---
-ALTER TABLE `Albums`
-  ADD CONSTRAINT `Albums_ibfk_1` FOREIGN KEY (`artist_id`) REFERENCES `Artists` (`id`);
-
---
--- Constraints for table `Comments`
---
-ALTER TABLE `Comments`
-  ADD CONSTRAINT `Comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`),
-  ADD CONSTRAINT `Comments_ibfk_2` FOREIGN KEY (`album_id`) REFERENCES `Albums` (`id`);
 
 --
 -- Constraints for table `Songs`

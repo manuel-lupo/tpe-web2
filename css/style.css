@@ -120,26 +120,6 @@ main{
     background: #FFF;
     padding-left: 1.5rem;
 }
-/* Est:root{
-    --color-indigo: #5E376D;
-    --color-rosequeartz: #F6E6E8;
-    --color-lilac: #D4BBDD;
-    --color-yellow: #F7E951;
-}
-
-html{
-    color: #000;
-    font-family: Inter;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.21rem;
-}
-
-body{
-    background-color: var(--color-rosequeartz);
-    margin: 0;
-    padding: 0;
-}
 
 /* Estilos del header */
 
@@ -197,6 +177,8 @@ main{
     align-items: center;
     height: 70vh;
     flex-direction: column;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .cards{
@@ -242,4 +224,9 @@ letter-spacing: 0.21rem;
     background: #FFF;
     padding-left: 1.5rem;
 }
-/* Est
+/* Estilos del footer */
+
+footer{
+    min-height: 11.2vh;
+    background-color: var(--color-indigo);
+}
