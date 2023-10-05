@@ -120,4 +120,126 @@ main{
     background: #FFF;
     padding-left: 1.5rem;
 }
-/* Estilos del footer */
+/* Est:root{
+    --color-indigo: #5E376D;
+    --color-rosequeartz: #F6E6E8;
+    --color-lilac: #D4BBDD;
+    --color-yellow: #F7E951;
+}
+
+html{
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.21rem;
+}
+
+body{
+    background-color: var(--color-rosequeartz);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+
+header{
+    background-color: var(--color-yellow);
+    display: flex;
+    max-height: 7rem;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+nav{
+    align-self: center;
+    display: flex;
+}
+
+.nav{
+    width: 7.7rem;
+    min-height: 3rem;
+    align-self: center;
+    margin: 0 1.5rem;
+    letter-spacing: 0.07875rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.nav:nth-child(2){
+    font-size: 0.65rem;
+}
+
+.button{
+    border-radius: 1.625rem;
+    border: 2px solid var(--color-indigo);
+    background-color: var(--color-rosequeartz);
+    color: var(--color-indigo);
+}
+
+.button.alt{
+    border-radius: 1.625rem;
+    border: 4px solid var(--color-rosequeartz);
+    background: var(--color-indigo);
+    color: var(--color-rosequeartz);
+    min-height: 3.5rem;
+    font-weight: 700;
+}
+
+header>img{
+    max-height: 7rem;
+}
+
+/* Estilos del main */
+
+main{
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+}
+
+.cards{
+    height: 70%;
+}
+
+.search{
+    max-width: 30rem;
+    max-height: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search_bar{
+    display: flex;
+    width: 34.5rem;
+    justify-content: space-around;
+}
+
+#submit_search {
+    min-width: 7.7rem;
+    max-height: 4rem;
+    align-self: center;
+}
+
+.search h3{
+    color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.21rem;
+}
+
+#search_input{
+    width: 20rem;
+    height: 3.5rem;
+    border-radius: 10.625rem;
+    border: 3px solid #000;
+    background: #FFF;
+    padding-left: 1.5rem;
+}
+/* Est
