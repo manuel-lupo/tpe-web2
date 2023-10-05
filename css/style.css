@@ -157,6 +157,10 @@ nav{
     color: var(--color-indigo);
 }
 
+.button:hover{
+    cursor: pointer;
+}
+
 .button.alt{
     border-radius: 1.625rem;
     border: 4px solid var(--color-rosequeartz);
@@ -183,6 +187,59 @@ main{
 
 .cards{
     height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    background-color: var(--color-lilac);
+    border-radius: 2.5625rem;
+    border: 3px solid #5E376D;
+    height: 95%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card>h2{
+    color: #5E376D;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.21rem;
+}
+
+img#cover{
+    background-color: grey;
+    width: 7rem;
+    height: 7rem;
+}
+
+.rating{
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating img{
+    margin: 0 0.5rem;
+}
+
+.description{
+    height: 9rem;
+}
+
+.description>p{
+    text-align: center;
+}
+
+.card-btn{
+    width: 7.2rem;
+    height: 3.1rem;
+    flex-shrink: 0;
 }
 
 .search{
@@ -227,6 +284,7 @@ letter-spacing: 0.21rem;
 /* Estilos del footer */
 
 footer{
-    min-height: 11.2vh;
+    min-height: 10.5vh;
     background-color: var(--color-indigo);
+    border-top: 6px solid #000;
 }
