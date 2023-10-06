@@ -1,0 +1,27 @@
+<div class="card">
+    <h2><?php echo $album->title?></h2>
+    <!--Imagenes en la base de datos = WIP-->
+    <img src="" alt="" id="cover">
+    <div class="rating">
+        <?php 
+            $count = $album->rating;
+            while ($count > 1) { ?>
+                <img src="./img/star.svg" alt="star">
+            <? 
+                --$count;
+            }
+            if (($count > 0) and ($count <= 0.5)){ ?>
+                <img src="./img/half_star.svg" alt="half_star">
+            <?php 
+            }
+            if ($count > 0.5){
+                ?>
+                <img src="./img/star.svg" alt="star"> 
+            <?php }
+        ?>
+    </div>
+    <div class="description">
+        <p><?php echo $album->description ?></p>
+    </div>
+    <a href="/albums/<?php echo $album->id ?>"><button class="button card-btn">VER MAS</button></a>
+</div>
