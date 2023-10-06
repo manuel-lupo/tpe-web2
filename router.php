@@ -11,13 +11,17 @@ if (!empty( $_GET['action'])) {
     $action = $_GET['action'];
 }
 
-// 'home' --> $main_controller->showHome();
-
+/* 'home' --> $main_controller->showHome();
+    Canciones -->  $songs_controller->showSongs();
+*/
 $params = explode('/', $action);
 
 switch ($params[0]) { // en la primer posicion tengo la accion real
     case 'home':
         $main_controller->showHome();
+        break;
+    case 'canciones':
+        $songs_controller->showSongs();
         break;
     default: 
         $main_controller->show404();
