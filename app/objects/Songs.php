@@ -1,13 +1,19 @@
 <?php
-class Album{
+class Songs{
     private $id;
 
     private $title;
     
     private $rel_date;
     
-    //private $album_id;
-
+    private $album_id;
+   
+    /**
+	 * @return string
+	 */
+	public function getAlbum_id() {
+		return $this->album_id;
+	}
 
 	/**
 	 * @return string
