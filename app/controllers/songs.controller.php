@@ -4,12 +4,17 @@ require_once './app/views/songs.view.php';
 require_once './app/models/songs.model.php';
 
 class songs_controller {
-    private $view;
     private $model;
+    private $view;
 
     public function __construct(){
-        $this->view = new Songs_view();
         $this->model = new Songs_model();
+        $this->view = new Songs_view();
+    }
+
+    public function searchSongs(){
+        $this->view->searchSongs();
+        $this->model->getSongsByAlbum($id);
     }
 
     public function showSongs(){

@@ -2,7 +2,7 @@
 try {
     require_once './app/objects/Album.php';
     require_once './app/controllers/main.controller.php';
-require_once './app/controllers/songs.controller.php';
+    require_once './app/controllers/songs.controller.php';
     define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']));
     $songs_controller = new songs_controller();
     $main_controller = new Main_controller();
@@ -16,20 +16,20 @@ require_once './app/controllers/songs.controller.php';
     Canciones -->  $songs_controller->showSongs();
     'albums' --> $album_controller->showAlbums();
     'albums/id' --> $album_controller->showAlbum(id);
-*/
+    */
     $params = explode('/', $action);
 
-switch ($params[0]) { // en la primer posicion tengo la accion real
-    case 'home':
-        $main_controller->showHome();
-        break;
-    case 'canciones':
-        $songs_controller->showSongs();
-        break;
-    default: 
-        $main_controller->show404();
-        break;
-}
+    switch ($params[0]) { // en la primer posicion tengo la accion real
+        case 'home':
+            $main_controller->showHome();
+            break;
+        case 'canciones':
+            $songs_controller->showSongs();
+            break;
+        default: 
+            $main_controller->show404();
+            break;
+    }
 } catch (\Throwable $th) {
     echo $th;
 }
