@@ -1,6 +1,6 @@
 <?php
 require_once './app/models/album.model.php';
-require_once './app/views/main.view.php';
+require_once './app/views/album.view.php';
 class Album_controller{
 
     private $view;
@@ -16,7 +16,8 @@ class Album_controller{
 
     public function showAlbum($id){
         $album = $this->album_model->getAlbumById($id);
-        $songs = $this->song_model->getSongsByAlbum($id);
+        //$songs = $this->song_model->getSongsByAlbum($id);
+        $this->view->renderAlbum($album);
     }
 
 }

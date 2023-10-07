@@ -15,8 +15,9 @@ class Album_model{
 
     public function getAlbumById($id){
         $query = $this->db->prepare('SELECT * FROM Albums WHERE id = ?');
+        $query->setFetchMode(PDO::FETCH_CLASS, 'Album');
         $query->execute([$id]);
-        return $query->fetch(PDO::FETCH_CLASS, 'Album');
+        return $query->fetch();
     }
 
 }

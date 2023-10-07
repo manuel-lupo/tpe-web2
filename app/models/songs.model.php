@@ -8,7 +8,7 @@ class Songs_model{
     }
 
     public function getSongs(){
-        $query = $this->db->prepare('SELECT * FROM songs');
+        $query = $this->db->prepare('SELECT * FROM Songs');
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
     }
