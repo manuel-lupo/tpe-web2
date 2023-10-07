@@ -13,7 +13,7 @@
 
         public function showHome(){
             $albums = $this->model->getAlbums();
-            $this->view->renderAlbums($albums);
+            $this->view->renderMain($albums);
         }
 
         public function show404(){

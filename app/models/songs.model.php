@@ -1,5 +1,5 @@
 <?php
-require_once './app/objects/Songs.php';
+require_once './app/objects/Song.php';
 class Songs_model{
     private $db;
 
@@ -10,6 +10,6 @@ class Songs_model{
     public function getSongs(){
         $query = $this->db->prepare('SELECT * FROM Songs');
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, 'Songs');
+        return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
     }
 }

@@ -12,4 +12,11 @@ class Album_model{
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, 'Album');
     }
+
+    public function getAlbumById($id){
+        $query = $this->db->prepare('SELECT * FROM Albums WHERE id = ?');
+        $query->execute([$id]);
+        return $query->fetch(PDO::FETCH_CLASS, 'Album');
+    }
+
 }
