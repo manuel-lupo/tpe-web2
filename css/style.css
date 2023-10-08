@@ -161,6 +161,12 @@ header{
 nav{
     align-self: center;
     display: flex;
+    align-items: center;
+}
+
+nav>a{
+    width: min-content;
+    height: min-content;
 }
 
 a .nav{
@@ -170,7 +176,7 @@ a .nav{
     margin: 0 1.5rem;
     letter-spacing: 0.07875rem;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 }
 
 a .nav:nth-child(3){
