@@ -31,6 +31,8 @@ switch ($params[0]) { // en la primer posicion tengo la accion real
     case 'albums':
         if(!empty($params[1]))
             $album_controller->showAlbum($params[1]);
+        else
+            $main_controller->show404();
         break;
     default: 
         $main_controller->show404();

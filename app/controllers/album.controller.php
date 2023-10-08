@@ -16,8 +16,8 @@ class Album_controller{
 
     public function showAlbum($id){
         $album = $this->album_model->getAlbumById($id);
-        //$songs = $this->song_model->getSongsByAlbum($id);
-        $this->view->renderAlbum($album);
+        $songs = $this->song_model->getSongsByAlbum($id);
+        $this->view->renderAlbum($album, $songs);
     }
 
 }

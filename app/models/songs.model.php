@@ -14,7 +14,7 @@ class Songs_model{
     }
 
     public function getSongsByAlbum($id) {
-        $query = $this->db->prepare('SELECT * FROM songs WHERE album_id = ?');
+        $query = $this->db->prepare('SELECT * FROM Songs WHERE album_id = ?');
         $query->execute([$id]);
         return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
     }

@@ -3,22 +3,7 @@
     <!--Imagenes en la base de datos = WIP-->
     <img src="" alt="" id="cover">
     <div class="rating">
-        <?php 
-            $count = $album->getRating();
-            while ($count > 1) { ?>
-                <img src="./img/star.png" alt="star">
-            <?php 
-                $count = $count-1;
-            }
-            if (($count > 0) && ($count <= 0.5)){ ?>
-                <img src="./img/half_star.png" alt="half_star">
-            <?php 
-            }
-            if ($count > 0.5){
-                ?>
-                <img src="./img/star.png" alt="star"> 
-            <?php }
-        ?>
+        <?php require './template/rating_stars.phtml'; ?>
     </div>
     <div class="description">
         <p><?php echo $album->getReview() ?></p>
