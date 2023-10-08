@@ -16,7 +16,17 @@
             <a href="/"><button class="nav button">INICIO</button></a>
             <a href="/canciones"><button class="nav button">CANCIONES</button></a>
             <a href="/404"><button class="nav button">ULTIMOS LANZAMIENTOS</button></a>
-            <a href="/404"><button class="nav button alt">INICIAR SESION</button></a>
+            <?php //if (rol del usario = admin){ ?>
+            <a href="/administracion/albums"><button class="nav button">ADMINISTRACION ALBUMS</button></a>
+            <a href="/administracion/songs"><button class="nav button">ADMINISTRACION SONGS</button></a>
+            <?php //} ?>
+            <a href="/404"><!--En esta linea hay que hacer un condicional para elegir si redirige a iniciar sesion o a cerrarla-->
+                <button class="nav button alt"><?php //if (sesion iniciada){?> 
+                    CERRAR
+                    <?php //} else echo 'INICIAR'?>
+                    SESION
+                </button>
+            </a>
         </nav>
     </header>
     <main>
