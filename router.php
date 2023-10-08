@@ -18,6 +18,7 @@ try {
     Canciones -->  $songs_controller->showSongs();
     'albums' --> $album_controller->showAlbums();
     'albums/id' --> $album_controller->showAlbum(id);
+    'administracion/albums' --> $album_controller->showAlbumAdminPanel();
     */
     $params = explode('/', $action);
 
@@ -32,6 +33,14 @@ switch ($params[0]) { // en la primer posicion tengo la accion real
         if(!empty($params[1]))
             $album_controller->showAlbum($params[1]);
         else
+            $main_controller->show404();
+        break;
+    case 'administracion':
+        if(empty($params[1]))
+            $main_controller->show404();
+        if($params[1] == 'albums')
+            $main_controller->show404();
+        if($params[1] == 'songs')
             $main_controller->show404();
         break;
     default: 
