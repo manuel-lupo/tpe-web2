@@ -17,6 +17,8 @@ function closeLogin(){
     FORM_CONTAINER.remove()
     let LOGIN_BTN = document.querySelector("#login_btn");
     LOGIN_BTN.addEventListener('click', handleLogin)
+    const event = new CustomEvent('login_closed');
+    document.dispatchEvent(event)
 }
 LOGIN_BTN.addEventListener('click', handleLogin)
 

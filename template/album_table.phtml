@@ -12,7 +12,7 @@
             <td> <?= $album->getArtist() ?></td>
             <td> <?= $album->getRel_date() ?> </td>
             <td><?= $album->getRating() ?></td>
-            <td><a href="albums/<?= $album->getId() ?>">[------]</a></td>
+            <td><a href="albums/<?= $album->getId() ?>"><button class="button alt">==></button></a></td>
         </tr>
     <?php } ?>
 </table>
