@@ -1,14 +1,3 @@
 <div>
-    <table class="table table-success table-striped">
-        <tr>
-            <td>Title</td>
-            <td>Release date</td>    
-        </tr>
-        <?php foreach ($songs as $song):?>
-            <tr>
-            <td> <?=$song->getTitle()?> </td> 
-            <td> <?=$song->getRel_date()?> </td>
-            </tr>
-        <?php endforeach ?>
-    </table>
+    <?php require_once './template/song_table.phtml' ?>
 </div>
