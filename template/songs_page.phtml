@@ -1,3 +1,13 @@
-<div>
-    <?php require_once './template/song_table.phtml' ?>
+<div class= "songs_page_container">     
+    <div class="songs_table">
+        <?php require_once './template/song_table.phtml' ?>
+    </div>
+    <div class="search_song_conteiner">
+        <div class="search_song">
+            <?php require_once './template/songs_searchbar.phtml'?>
+        </div>
+        <div class="song_search_result">
+            <p></p>
+        </div>
+    </div>
 </div>

@@ -386,3 +386,59 @@ footer{
 }
 
 /* estilos de la pagina de canciones */
+
+.songs_page_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}   
+.songs_table{
+    background-color: var(--color-lilac);
+    border-radius: 2.5625rem;
+    border: 3px solid #5E376D;
+    height: 95%;
+    width: 55%;
+    flex-grow: 1;
+    flex-basis: 48%;
+    padding: 1%;
+}
+
+.search_song_conteiner{
+    content: "";
+    flex: auto;
+    margin-left: 1%;
+}
+
+.songs_search{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.songs_search_bar{
+    display: flex;
+    width: 34.5rem;
+    justify-content: space-around;
+    justify-content:center;
+}
+
+h3 .search_song_conteiner{
+    justify-items: center;
+}
+
+.search_song{
+    background-color: var(--color-lilac);
+    border-radius: 2.5625rem;
+    border: 3px solid #5E376D;
+    height: 20%;
+}
+
+.song_search_result{
+    background-color: var(--color-lilac);
+    border-radius: 2.5625rem;
+    border: 3px solid #5E376D;
+}
