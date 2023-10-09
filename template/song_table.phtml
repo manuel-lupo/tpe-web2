@@ -1,12 +1,18 @@
 <table class="table table-success table-striped">
+    <tr>
+        <td>Title</td>
+        <td>Release date</td>    
+    </tr>
+    <?php foreach ($songs as $song){?>
         <tr>
-            <td>Title</td>
-            <td>Release date</td>    
+        <td> <?=$song->getTitle()?> </td> 
+        <td> <?=$song->getRel_date()?> </td>
         </tr>
-        <?php foreach ($songs as $song){?>
-            <tr>
-            <td> <?=$song->getTitle()?> </td> 
-            <td> <?=$song->getRel_date()?> </td>
-            </tr>
-        <?php }  ?>
-    </table>
+    <?php }  ?>
+</table>
+
+<!-- en tr agrgar data_id el id del ambun
+     cortar el string del rel date para que no aparezcan los 00:00:00
+     mejorar estetica
+     ver que otro dato se puede agregar   
+-->
