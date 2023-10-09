@@ -1,16 +1,16 @@
 <?php 
             $count = $album->getRating();
             while ($count > 1) { ?>
-                <img src="../img/star.png" alt="star">
+                <img src="./img/star.png" alt="star">
             <?php 
                 $count = $count-1;
             }
             if (($count > 0) && ($count <= 0.5)){ ?>
-                <img src="../img/half_star.png" alt="half_star">
+                <img src="./img/half_star.png" alt="half_star">
             <?php 
             }
             if ($count > 0.5){
                 ?>
-                <img src="../img/star.png" alt="star"> 
+                <img src="./img/star.png" alt="star"> 
             <?php }
         ?>
