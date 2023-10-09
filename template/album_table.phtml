@@ -1,4 +1,4 @@
-<table class="table table-success table-striped">
+<table class="table table-success table-striped album_table">
     <tr>
         <td>Title</td>
         <td>Artist</td>
@@ -7,14 +7,12 @@
         <td>Ver mas</td>
     </tr>
     <?php foreach ($albums as $album) { ?>
-        <tr>
+        <tr id='album_row' data-id="<?=$album->getId()?>">
             <td> <?= $album->getTitle() ?> </td>
             <td> <?= $album->getArtist() ?></td>
             <td> <?= $album->getRel_date() ?> </td>
             <td><?= $album->getRating() ?></td>
-            <a href="album/<?= $album->getId() ?>">
-                <td><--></td>
-            </a>
+            <td><a href="albums/<?= $album->getId() ?>">[------]</a></td>
         </tr>
-    <?php }  ?>
+    <?php } ?>
 </table>

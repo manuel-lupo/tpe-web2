@@ -20,4 +20,14 @@ class Album_controller{
         $this->view->renderAlbum($album, $songs);
     }
 
+    public function showAlbumList(){
+        $albums = $this->album_model->getAlbums();
+        $this->view->renderAlbumList($albums);
+    }
+
+    public function showAlbumCard($id){
+        $album = $this->album_model->getAlbumById($id);
+        $this->view->renderAlbumCard($album);
+    }
+
 }

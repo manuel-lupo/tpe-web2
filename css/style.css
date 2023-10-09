@@ -384,3 +384,27 @@ footer{
 .album_songs>table{
     margin: 2rem 2rem;
 }
+
+.album_table{
+    max-width: 50%;
+    align-self: flex-start;
+}
+
+.album_list_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.card_container{
+    width: 45vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card_container>.card{
+    min-width: 30vw;
+    max-height: 60vh;
+}
