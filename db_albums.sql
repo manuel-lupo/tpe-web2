@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1deb5ubuntu1
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Generation Time: Oct 05, 2023 at 05:54 PM
--- Server version: 8.0.34-0ubuntu0.22.04.1
--- PHP Version: 8.1.2-1ubuntu2.14
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -118,6 +109,32 @@ ALTER TABLE `Users`
 --
 ALTER TABLE `Songs`
   ADD CONSTRAINT `Songs_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `Albums` (`id`);
+
+
+INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('milo j x bzrp','2023/10/9','asasdsd','milo j and bzrp','rap','5');
+INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('oktubre','1985/10/9','asassddsd','patricio rey y sus redonditos de ricota','rock','5');
+INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('In the court of the crimson king','1969/10/9','asasdsddsd','king crimson','progressive rock','5');
+INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('ruido de lluvia en el bosque','2006/10/9','asaxdxdxdsdsd','henry macdonald','ambient','4');
+INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('delicate steve','2022/10/9','asasdsdsfsd','steve delicate','r&b','3');
+
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('FRUTO','2023/10/9','1');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('OTURF','2023/10/9','1');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('SIN MIC','2023/10/9','1');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Bzrp music session','2023/10/9','1');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('21st century schizoid man','2023/10/9','3');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('THE COURT OF THE CRIMSON KING','2023/10/9','3');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('epitaph','2023/10/9','3');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('moonchild','2023/10/9','3');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('POWER','2023/10/9','3');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Jijiji','2023/10/9','2');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('fuegos de oktubre','2023/10/9','2');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('noticias de ayer','2023/10/9','2');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('vamos los redo','2023/10/9','2');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Ruido de lluvia en el bosque','2023/10/9','4');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Delicate steve','2023/10/9','5');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('scooby galletas','2023/10/9','5');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('outro','2023/10/9','5');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('THE END','2023/10/9','5');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
