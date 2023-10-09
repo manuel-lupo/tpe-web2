@@ -1,12 +1,13 @@
 <div class="card">
-    <h2><?php echo $album->getTitle()?></h2>
+    <h2><?=$album->getTitle()?></h2>
+    <h6><?=$album->getArtist()?></h6>
     <!--Imagenes en la base de datos = WIP-->
     <img src="" alt="" id="cover">
     <div class="rating">
         <?php require './template/rating_stars.phtml'; ?>
     </div>
     <div class="description">
-        <p><?php echo $album->getReview() ?></p>
+        <p><?=$album->getReview() ?></p>
     </div>
-    <a href="albums/<?php echo $album->getId() ?>"><button class="button card-btn">VER MAS</button></a>
+    <a href="albums/<?=$album->getId() ?>"><button class="button card-btn">VER MAS</button></a>
 </div>
