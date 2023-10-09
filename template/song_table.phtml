@@ -1,12 +1,15 @@
 <table class="table table-success table-striped">
     <tr>
         <td>Title</td>
-        <td>Release date</td>    
+        <td>Release date</td>
+        <td>Album</td>    
     </tr>
     <?php foreach ($songs as $song){?>
         <tr>
         <td> <?=$song->getTitle()?> </td> 
         <td> <?=$song->getRel_date()?> </td>
+        <td> <?=$titleGetter($song->getAlbum_Id())?></td>
+
         </tr>
     <?php }  ?>
 </table>

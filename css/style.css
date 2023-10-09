@@ -428,10 +428,18 @@ footer{
     border-radius: 2.5625rem;
     border: 3px solid #5E376D;
     height: 95%;
-    width: 55%;
+    width: 100%;
     flex-grow: 1;
     flex-basis: 48%;
     padding: 1%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+}
+table{
+    display: block;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .search_song_conteiner{
