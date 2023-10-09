@@ -10,6 +10,20 @@ a{
     text-decoration: none;
 }
 
+.table-success {
+    --bs-table-color: var(--color-indigo);
+    --bs-table-bg: var(--color-lilac);
+    --bs-table-border-color: #bcd0c7;
+    --bs-table-striped-bg: var(--color-indigo);
+    --bs-table-striped-color: var(--color-rosequeartz);
+    --bs-table-active-bg: #bcd0c7;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: #c1d6cc;
+    --bs-table-hover-color: #000;
+    color: #000;
+    border-color: var(--bs-table-border-color);
+}
+
 html{
     color: #000;
     font-family: Inter;
