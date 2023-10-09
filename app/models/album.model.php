@@ -24,5 +24,5 @@ class Album_model{
         $query= $this->db->prepare('DELETE FROM Albums WHERE id = ?');
         $query->execute([$id]);
     }
-
+    
 }

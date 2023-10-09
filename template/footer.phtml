@@ -2,7 +2,7 @@
     <footer>
 
     </footer>
-<?php if($action == 'albums'){ ?>
+<?php if((!empty($action)) and $action == 'albums'){ ?>
 <script type="text/javascript" src="js/card_display.js"></script>
 <?php } ?>
 </body>

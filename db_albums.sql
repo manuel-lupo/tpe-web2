@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `Albums` (
   `id` int NOT NULL,
   `title` varchar(45) NOT NULL,
-  `rel_date` datetime DEFAULT NULL,
+  `rel_date` date DEFAULT NULL,
   `review` text NOT NULL,
   `artist` varchar(255) DEFAULT NULL,
   `genre` varchar(255) DEFAULT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `Albums` (
 CREATE TABLE `Songs` (
   `id` int NOT NULL,
   `title` varchar(45) NOT NULL,
-  `rel_date` datetime DEFAULT NULL,
+  `rel_date` date DEFAULT NULL,
   `album_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
