@@ -21,13 +21,11 @@
             <a href="administracion/albums"><button class="nav button">ADMINISTRACION ALBUMS</button></a>
             <a href="administracion/songs"><button class="nav button">ADMINISTRACION SONGS</button></a>
             <?php //} ?>
-            <a href="404"><!--En esta linea hay que hacer un condicional para elegir si redirige a iniciar sesion o a cerrarla-->
-                <button class="nav button alt"><?php //if (sesion iniciada){?> 
-                    CERRAR
-                    <?php //} else echo 'INICIAR'?>
-                    SESION
-                </button>
-            </a>
+            <button class="nav button alt" id="login_btn"><?php //if (sesion iniciada){?> 
+                CERRAR
+                <?php //} else echo 'INICIAR'?>
+                SESION
+            </button>
         </nav>
     </header>
     <main>

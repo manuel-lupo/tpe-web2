@@ -442,7 +442,7 @@ table{
     height: 100%;
 }
 
-.search_song_conteiner{
+.search_song_container{
     content: "";
     flex: auto;
     margin-left: 1%;
@@ -464,7 +464,7 @@ table{
     justify-content:center;
 }
 
-h3 .search_song_conteiner{
+h3 .search_song_container{
     justify-items: center;
 }
 
@@ -480,3 +480,4 @@ h3 .search_song_conteiner{
     border-radius: 2.5625rem;
     border: 3px solid #5E376D;
 }
+
