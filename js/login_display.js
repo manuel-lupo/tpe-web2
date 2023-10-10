@@ -1,4 +1,4 @@
-let LOGIN_BTN = document.querySelector("#login_btn");
+let login_btn = document.querySelector("#login_btn");
 const LOGIN_CONTAINER = document.querySelector("body");
 async function handleLogin(){
     params = new URLSearchParams();
@@ -15,11 +15,11 @@ async function handleLogin(){
 function closeLogin(){
     let FORM_CONTAINER = document.querySelector(".login_container")
     FORM_CONTAINER.remove()
-    let LOGIN_BTN = document.querySelector("#login_btn");
-    LOGIN_BTN.addEventListener('click', handleLogin)
-    const event = new CustomEvent('login_closed');
-    document.dispatchEvent(event)
+    let login_btn = document.querySelector("#login_btn");
+    login_btn.addEventListener('click', handleLogin)
+    const EVENT = new CustomEvent('login_closed');
+    document.dispatchEvent(EVENT)
 }
-LOGIN_BTN.addEventListener('click', handleLogin)
+login_btn.addEventListener('click', handleLogin)
 
 
