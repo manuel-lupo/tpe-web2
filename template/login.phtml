@@ -1,14 +1,14 @@
 <div class="login_container">
-    <form class="login_form card">
+    <form class="login_form card" method="POST" action="auth">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">User</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
         </div>
-        <?php if ($error) { ?>
+        <?php if (isset($error)) { ?>
             <div class='alert alert-danger' role='alert'>
                 <?= $error ?>
             </div> 

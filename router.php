@@ -61,7 +61,7 @@ switch ($params[0]) { // en la primer posicion tengo la accion real
         }
         break;
     case 'auth':
-        
+        $auth_controller->auth();
         break;
     default: 
         $main_controller->show404();

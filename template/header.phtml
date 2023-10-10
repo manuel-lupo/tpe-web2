@@ -17,14 +17,16 @@
             <a href="home"><button class="nav button">INICIO</button></a>
             <a href="canciones"><button class="nav button">CANCIONES</button></a>
             <a href="albums"><button class="nav button">VER ALBUMS</button></a>
-            <?php //if (rol del usario = admin){ ?>
+            <?php if (isset($_SESSION["USER_ID"])){ ?>
             <a href="administracion/albums"><button class="nav button">ADMINISTRACION ALBUMS</button></a>
             <a href="administracion/songs"><button class="nav button">ADMINISTRACION SONGS</button></a>
-            <?php //} ?>
-            <button class="nav button alt" id="login_btn"><?php //if (sesion iniciada){?> 
+            <?php } ?>
+            <button class="nav button alt" id="login_btn"><?php if (isset($_SESSION["USER_ID"])){?> 
                 CERRAR
-                <?php //} else echo 'INICIAR'?>
-                SESION
+                <?php } else {?>
+                INICIAR
+                <?php } ?>
+                SESION           
             </button>
         </nav>
     </header>

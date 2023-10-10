@@ -18,21 +18,21 @@ class Auth_controller{
     }
 
     public function auth() {
-        $user = $_POST['user'];
+        $user_name = $_POST['user'];
         $password = $_POST['password'];
 
-        if (empty($user) || empty($password)) {
+        if (empty($user_name) || empty($password)) {
             $this->view->renderLoginPage('Faltan completar datos');
             return;
         }
 
         // busco el usuario
-        $user = $this->model->getByUser($user);
+        $user = $this->model->getByUser($user_name);
         if ($user && password_verify($password, $user->password)) {
             // ACA LO AUTENTIQUE
             
             AuthHelper::login($user);
-            
+            var_dump($_SESSION["USER_NAME"]);
             header('Location: ' . BASE_URL);
         } else {
             $this->view->renderLoginPage('Usuario inválido');
