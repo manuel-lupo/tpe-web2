@@ -1,7 +1,7 @@
 <?php
 
 class Auth_view{
-    public function renderLoginForm($error = NULL){
+    public function renderLoginForm(){
         require_once './template/login.phtml';
     }
 }
