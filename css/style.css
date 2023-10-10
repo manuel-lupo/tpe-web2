@@ -514,3 +514,9 @@ h3 .search_song_container{
     display: flex;
     justify-content: space-around;
 }
+
+/* Estilos del admin */
+.panel-conteiner{
+    width: 90%;
+    flex-wrap: wrap;
+}

@@ -45,7 +45,7 @@ switch ($params[0]) { // en la primer posicion tengo la accion real
         if(empty($params[1]))
             $main_controller->show404();
         if($params[1] == 'albums')
-            $main_controller->show404();
+            $album_controller->showAdminPanel();
         if($params[1] == 'songs')
             $main_controller->show404();
         break;

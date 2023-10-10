@@ -30,4 +30,8 @@ class Album_controller{
         $this->view->renderAlbumCard($album);
     }
 
+    public function showAdminPanel(){
+        $this->view->renderAdminPanel();
+    }
+
 }
