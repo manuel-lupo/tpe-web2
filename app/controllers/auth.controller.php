@@ -13,5 +13,28 @@ class Auth_controller{
 
     public function showLoginForm(){
         $this->view->renderLoginForm();
+
+    }
+
+    public function auth() {
+        $user = $_POST['user'];
+        $password = $_POST['password'];
+
+        if (empty($user) || empty($password)) {
+            $this->view->renderLoginForm('Faltan completar datos');
+            return;
+        }
+
+        // busco el usuario
+        $user = $this->model->getByUser($user);
+        if ($user && password_verify($password, $user->password)) {
+            // ACA LO AUTENTIQUE
+            
+            AuthHelper::login($user);
+            
+            header('Location: ' . BASE_URL);
+        } else {
+            $this->view->renderLoginForm('Usuario inválido');
+        }
     }
 }
