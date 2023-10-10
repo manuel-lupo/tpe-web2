@@ -14,8 +14,16 @@ class Auth_controller{
 
     public function showLoginForm(){
         $this->view->renderLoginForm();
-
     }
+
+    public function showConfirmationBox(){
+        $this->view->renderConfirmationBox();
+    }
+    
+    public function checkSession(){
+        AuthHelper::init();
+    }
+
 
     public function auth() {
         $user_name = $_POST['user'];
@@ -37,6 +45,11 @@ class Auth_controller{
         } else {
             $this->view->renderLoginPage('Usuario inválido');
         }
+    }
+
+    public function logout(){
+        AuthHelper::logout();
+        header('Location: ' . BASE_URL);
     }
     
 }

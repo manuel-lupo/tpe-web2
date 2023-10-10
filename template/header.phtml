@@ -21,7 +21,8 @@
             <a href="administracion/albums"><button class="nav button">ADMINISTRACION ALBUMS</button></a>
             <a href="administracion/songs"><button class="nav button">ADMINISTRACION SONGS</button></a>
             <?php } ?>
-            <button class="nav button alt" id="login_btn"><?php if (isset($_SESSION["USER_ID"])){?> 
+            <button class="nav button alt" id="login_btn" <?php if(isset($_SESSION["USER_ID"])) { ?>data-log="true" <?php } ?>>
+                <?php if (isset($_SESSION["USER_ID"])){?> 
                 CERRAR
                 <?php } else {?>
                 INICIAR

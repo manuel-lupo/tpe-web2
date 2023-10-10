@@ -3,6 +3,8 @@ const LOGIN_CONTAINER = document.querySelector("body");
 async function handleLogin(){
     params = new URLSearchParams();
     params.append('type', 'get_login_form');
+    if(login_btn.dataset.log == "true")
+        params.append('logged', login_btn.dataset.log)
     await fetch('request', {
         method:"POST",
         body: params

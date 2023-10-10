@@ -7,10 +7,14 @@ try {
     require_once './app/controllers/album.controller.php';
     require_once './app/controllers/auth.controller.php';
     define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
+
     $songs_controller = new songs_controller();
     $main_controller = new Main_controller();
     $album_controller = new Album_controller();
     $auth_controller = new Auth_controller();
+
+    $auth_controller->checkSession();
+
     $action = 'home'; // accion por defecto
     if (!empty($_GET['action'])) {
         $action = $_GET['action'];
@@ -56,13 +60,20 @@ switch ($params[0]) { // en la primer posicion tengo la accion real
                     throw new Exception("No se ha proporcionado una id", 1);  
                 break;
             case 'get_login_form':
-                $auth_controller->showLoginForm();
+                if(empty($_POST['logged']))
+                    $auth_controller->showLoginForm();
+                else
+                    $auth_controller->showConfirmationBox();
             break;
         }
         break;
     case 'auth':
         $auth_controller->auth();
         break;
+        
+    case 'logout':
+            $auth_controller->logout();
+            break;
     default: 
         $main_controller->show404();
         break;
