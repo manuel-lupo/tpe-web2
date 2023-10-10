@@ -110,6 +110,7 @@ ALTER TABLE `Users`
 ALTER TABLE `Songs`
   ADD CONSTRAINT `Songs_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `Albums` (`id`);
 
+INSERT INTO `Users`(`name`, `password`, `role`) VALUES ('webadmin','admin','admin');
 
 INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('milo j x bzrp','2023/10/9','asasdsd','milo j and bzrp','rap','5');
 INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('oktubre','1985/10/9','asassddsd','patricio rey y sus redonditos de ricota','rock','5');
