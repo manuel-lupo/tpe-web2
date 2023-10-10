@@ -1,6 +1,7 @@
 <?php
 require_once './app/models/user.model.php';
 require_once './app/views/auth.view.php';
+require_once './app/helpers/auth.helper.php';
 
 class Auth_controller{
     private $model;
@@ -21,7 +22,7 @@ class Auth_controller{
         $password = $_POST['password'];
 
         if (empty($user) || empty($password)) {
-            $this->view->renderLoginForm('Faltan completar datos');
+            $this->view->renderLoginPage('Faltan completar datos');
             return;
         }
 
@@ -34,7 +35,8 @@ class Auth_controller{
             
             header('Location: ' . BASE_URL);
         } else {
-            $this->view->renderLoginForm('Usuario inválido');
+            $this->view->renderLoginPage('Usuario inválido');
         }
     }
+    
 }
