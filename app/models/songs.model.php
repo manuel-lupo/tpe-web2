@@ -18,4 +18,10 @@ class Songs_model{
         $query->execute([$id]);
         return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
     }
+
+    public function getSongById($id){
+        $query = $this->db->prepare('SELECT * FROM Songs WHERE id= ?');
+        $query->execute([$id]);
+        return $query->fetchAll(PDO::FETCH_CLASS, 'Song')[0];
+    }
 }

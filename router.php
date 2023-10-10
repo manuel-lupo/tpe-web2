@@ -59,6 +59,12 @@ switch ($params[0]) { // en la primer posicion tengo la accion real
                 else
                     throw new Exception("No se ha proporcionado una id", 1);  
                 break;
+            case 'get_song_lyric':
+                if(!empty($_POST['id']))
+                    $songs_controller->showLyric($_POST['id']);
+                else
+                    throw new Exception("No se ha proporcionado una id", 1);  
+                break;
             case 'get_login_form':
                 if(empty($_POST['logged']))
                     $auth_controller->showLoginForm();
