@@ -7,7 +7,17 @@ class Song{
     private $rel_date;
     
     private $album_id;
+
+	private $lyrics;
    
+
+	    /**
+	 * @return string
+	 */
+	public function getLyrics() {
+		return $this->lyrics;
+	}
+
     /**
 	 * @return string
 	 */
