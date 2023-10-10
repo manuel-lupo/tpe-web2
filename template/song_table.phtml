@@ -5,7 +5,7 @@
         <td>Album</td>    
     </tr>
     <?php foreach ($songs as $song){?>
-        <tr>
+        <tr data-id="<?= $song->getId() ?>" id="song_row">
         <td> <?=$song->getTitle()?> </td> 
         <td> <?=$song->getRel_date()?> </td>
         <td> <?=$titleGetter($song->getAlbum_Id())?></td>

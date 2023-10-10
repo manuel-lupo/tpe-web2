@@ -429,7 +429,6 @@ footer{
 .songs_page_container{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     height: 100%;
 }   
 .songs_table{
@@ -455,6 +454,9 @@ table{
     content: "";
     flex: auto;
     margin-left: 1%;
+    display:flex;
+    width: 45%;
+    flex-direction: column;
 }
 
 .songs_search{
@@ -489,6 +491,15 @@ h3 .search_song_container{
     border-radius: 2.5625rem;
     border: 3px solid #5E376D;
 }
+
+.song_content{
+    padding: 2rem;
+}
+
+.lyric{
+    max-height: 22.4rem;
+}
+
 
 /* estilos de display login */
 
