@@ -22,7 +22,7 @@ class Auth_controller{
         $password = $_POST['password'];
 
         if (empty($user) || empty($password)) {
-            $this->view->renderLoginForm('Faltan completar datos');
+            $this->view->renderLoginPage('Faltan completar datos');
             return;
         }
 
@@ -35,7 +35,8 @@ class Auth_controller{
             
             header('Location: ' . BASE_URL);
         } else {
-            $this->view->renderLoginForm('Usuario inválido');
+            $this->view->renderLoginPage('Usuario inválido');
         }
     }
+    
 }

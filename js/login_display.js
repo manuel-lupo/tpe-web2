@@ -21,5 +21,3 @@ function closeLogin(){
     document.dispatchEvent(EVENT)
 }
 login_btn.addEventListener('click', handleLogin)
-
-
