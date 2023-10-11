@@ -13,8 +13,15 @@ class Album{
     private $rating;
 
     
-
-
+	public function setValues($title, $rel_date, $review, $artist, $genre, $rating){
+		$this->id = null;		
+		$this->title = $title;
+		$this->rel_date = $rel_date;
+		$this->review = $review;
+		$this->artist = $artist;
+		$this->$genre = $genre;
+		$this->rating = $rating;
+	}
 
 	/**
 	 * @return float

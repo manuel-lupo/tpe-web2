@@ -25,7 +25,7 @@ CREATE TABLE `Albums` (
   `review` text NOT NULL,
   `artist` varchar(255) DEFAULT NULL,
   `genre` varchar(255) DEFAULT NULL,
-  `rating` int DEFAULT NULL
+  `rating` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- --------------------------------------------------------

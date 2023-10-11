@@ -11,7 +11,6 @@ function DB_table_exists($db, $table){
 
     try {
         $dbh = new PDO("mysql:host=localhost", 'root', '');
-
         $dbh->exec("CREATE DATABASE `db_albums`;");
         $dbh = new PDO('mysql:host=localhost;dbname=db_albums;charset=utf8', 'root', '');
         $sql = file_get_contents('./db_albums.sql');

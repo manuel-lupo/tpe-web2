@@ -24,5 +24,15 @@ class Album_model{
         $query= $this->db->prepare('DELETE FROM Albums WHERE id = ?');
         $query->execute([$id]);
     }
+
+    public function updateAlbum($id , $album){
+        $query= $this->db->prepare('UPDATE `Albums` SET `title`= ?,`rel_date`=?,`review`=?,`artist`=?,`genre`=?,`rating`=? WHERE id = ?');
+        $query->execute([$album->getTitle() , $album->getRel_date(), $album->getReview(), $album->getArtist(), $album->getGenre(), $album->getRating() , $id]);
+    }
+
     
+    public function createAlbum($album){
+        $query = $this->db->prepare("INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES (?,?,?,?,?,?)");
+        $query->execute([$album->getTitle() , $album->getRel_date(), $album->getReview(), $album->getArtist(), $album->getGenre(), $album->getRating()]);
+    }
 }

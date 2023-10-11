@@ -32,15 +32,18 @@ try {
         case 'home':
             $main_controller->showHome();
             break;
+
         case 'canciones':
             $songs_controller->showSongs();
             break;
+
         case 'albums':
             if (!empty($params[1]))
                 $album_controller->showAlbum($params[1]);
             else
                 $album_controller->showAlbumList();
             break;
+
         case 'administracion':
             if (empty($params[1]))
                 $main_controller->show404();
@@ -49,6 +52,53 @@ try {
             if ($params[1] == 'songs')
                 $main_controller->show404();
             break;
+
+        case 'add':
+            switch ($params[1]) {
+                case 'album':
+                    $album_controller->addAlbum();
+                    break;
+
+                default:
+                    header("Location: /home");
+                    break;
+            }
+            break;
+
+        case 'delete':
+            switch ($params[1]) {
+                case 'album':
+                    if (isset($_POST['album']))
+                        $album_controller->deleteAlbum($_POST['album']);
+                    break;
+
+                default:
+                    header("Location: /home");
+                    break;
+            }
+            break;
+
+        case 'update':
+            switch ($params[1]) {
+                case 'album':
+                    if (isset($_POST['album']))
+                        $album_controller->updateAlbum();
+                    break;
+
+                default:
+                    header("Location: /home");
+                    break;
+            }
+            break;
+
+        case 'auth':
+            $auth_controller->auth();
+            break;
+
+        case 'logout':
+            $auth_controller->logout();
+            break;
+
         case 'request':
             if (empty($_POST['type']))
                 header('Location: /home');
@@ -79,48 +129,7 @@ try {
                     break;
             }
             break;
-        case 'add':
-            switch ($params[1]) {
-                case 'album':
-                    # code...
-                    break;
 
-                default:
-                    header("Location: /home");
-                    break;
-            }
-            break;
-        case 'delete':
-            switch ($params[1]) {
-                case 'album':
-                    if (isset($_POST['album']))
-                        $album_controller->deleteAlbum($_POST['album']);
-                    break;
-
-                default:
-                    header("Location: /home");
-                    break;
-            }
-            break;
-        case 'update ':
-            switch ($params[1]) {
-                case 'album':
-                    if (isset($_POST['album']))
-                        //$album_controller->deleteAlbum($_POST['album']);
-                    break;
-
-                default:
-                    header("Location: /home");
-                    break;
-            }
-            break;
-        case 'auth':
-            $auth_controller->auth();
-            break;
-
-        case 'logout':
-            $auth_controller->logout();
-            break;
         default:
             $main_controller->show404();
             break;
