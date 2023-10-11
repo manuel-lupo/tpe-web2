@@ -109,7 +109,7 @@ ALTER TABLE `Users`
 -- Constraints for table `Songs`
 --
 ALTER TABLE `Songs`
-  ADD CONSTRAINT `Songs_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `Albums` (`id`);
+  ADD CONSTRAINT `Songs_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `Albums` (`id`) ON DELETE CASCADE;
 
 INSERT INTO `Users`(`name`, `password`, `role`) VALUES ('webadmin','$2y$10$480tQnUpv7QrZgkJLwS2MO73HPcSDrdMPIRBD/dC1Bk4jiI4rc9Uy','admin');
 

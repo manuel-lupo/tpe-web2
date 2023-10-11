@@ -79,6 +79,41 @@ try {
                     break;
             }
             break;
+        case 'add':
+            switch ($params[1]) {
+                case 'album':
+                    # code...
+                    break;
+
+                default:
+                    header("Location: /home");
+                    break;
+            }
+            break;
+        case 'delete':
+            switch ($params[1]) {
+                case 'album':
+                    if (isset($_POST['album']))
+                        $album_controller->deleteAlbum($_POST['album']);
+                    break;
+
+                default:
+                    header("Location: /home");
+                    break;
+            }
+            break;
+        case 'update ':
+            switch ($params[1]) {
+                case 'album':
+                    if (isset($_POST['album']))
+                        //$album_controller->deleteAlbum($_POST['album']);
+                    break;
+
+                default:
+                    header("Location: /home");
+                    break;
+            }
+            break;
         case 'auth':
             $auth_controller->auth();
             break;
