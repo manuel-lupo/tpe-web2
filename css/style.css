@@ -528,6 +528,40 @@ h3 .search_song_container{
 
 /* Estilos del admin */
 .panel-conteiner{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 85% 1fr;
+    grid-template-areas: 
+    "add modify"
+    "delete delete";
+}
+
+.add-panel{
     width: 90%;
-    flex-wrap: wrap;
+    grid-area: add;
+}
+
+.modify{
+    grid-area: modify;
+}
+
+.panel-conteiner form>label{
+    width: 100%;
+}
+
+.delete{
+    grid-area: delete;
+    display: flex;
+    justify-content: center;
+}
+
+#delete-selection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#delete-selection>*{
+    margin: 0.5rem 0;
 }

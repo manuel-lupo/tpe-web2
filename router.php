@@ -28,62 +28,68 @@ try {
     */
     $params = explode('/', $action);
 
-switch ($params[0]) { // en la primer posicion tengo la accion real
-    case 'home':
-        $main_controller->showHome();
-        break;
-    case 'canciones':
-        $songs_controller->showSongs();
-        break;
-    case 'albums':
-        if(!empty($params[1]))
-            $album_controller->showAlbum($params[1]);
-        else
-            $album_controller->showAlbumList();
-        break;
-    case 'administracion':
-        if(empty($params[1]))
-            $main_controller->show404();
-        if($params[1] == 'albums')
-            $album_controller->showAdminPanel();
-        if($params[1] == 'songs')
-            $main_controller->show404();
-        break;
-    case 'request':
-        if(empty($_POST['type']))
-            header('Location: /home');
-        switch ($_POST['type']) {
-            case 'get_album_card':
-                if(!empty($_POST['id']))
-                    $album_controller->showAlbumCard($_POST['id']);
-                else
-                    throw new Exception("No se ha proporcionado una id", 1);  
-                break;
-            case 'get_song_lyric':
-                if(!empty($_POST['id']))
-                    $songs_controller->showLyric($_POST['id']);
-                else
-                    throw new Exception("No se ha proporcionado una id", 1);  
-                break;
-            case 'get_login_form':
-                if(empty($_POST['logged']))
-                    $auth_controller->showLoginForm();
-                else
-                    $auth_controller->showConfirmationBox();
+    switch ($params[0]) { // en la primer posicion tengo la accion real
+        case 'home':
+            $main_controller->showHome();
             break;
-        }
-        break;
-    case 'auth':
-        $auth_controller->auth();
-        break;
-        
-    case 'logout':
+        case 'canciones':
+            $songs_controller->showSongs();
+            break;
+        case 'albums':
+            if (!empty($params[1]))
+                $album_controller->showAlbum($params[1]);
+            else
+                $album_controller->showAlbumList();
+            break;
+        case 'administracion':
+            if (empty($params[1]))
+                $main_controller->show404();
+            if ($params[1] == 'albums')
+                $album_controller->showAdminPanel();
+            if ($params[1] == 'songs')
+                $main_controller->show404();
+            break;
+        case 'request':
+            if (empty($_POST['type']))
+                header('Location: /home');
+            switch ($_POST['type']) {
+                case 'get_album_card':
+                    if (!empty($_POST['id']))
+                        $album_controller->showAlbumCard($_POST['id']);
+                    else
+                        throw new Exception("No se ha proporcionado una id", 1);
+                    break;
+                case 'get_song_lyric':
+                    if (!empty($_POST['id']))
+                        $songs_controller->showLyric($_POST['id']);
+                    else
+                        throw new Exception("No se ha proporcionado una id", 1);
+                    break;
+                case 'get_login_form':
+                    if (empty($_POST['logged']))
+                        $auth_controller->showLoginForm();
+                    else
+                        $auth_controller->showConfirmationBox();
+                    break;
+                case 'get_modify_panel':
+                    if (!empty($_POST['id']))
+                        $album_controller->showModifyForm($_POST['id']);
+                    else
+                        throw new Exception("No se ha proporcionado una id", 1);
+                    break;
+            }
+            break;
+        case 'auth':
+            $auth_controller->auth();
+            break;
+
+        case 'logout':
             $auth_controller->logout();
             break;
-    default: 
-        $main_controller->show404();
-        break;
-}
+        default:
+            $main_controller->show404();
+            break;
+    }
 } catch (\Throwable $th) {
     echo $th;
 }

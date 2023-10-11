@@ -1,0 +1,6 @@
+<select name="album" id="album_select">
+    <option value="Seleccione una opcion" selected disabled>Seleccione una opcion</option>
+    <?php foreach ($albums as $album) {
+    ?><option value="<?= $album->getId() ?>"><?= $album->getTitle() ?></option>
+    <?php } ?>
+</select>

@@ -1,8 +1,32 @@
 <div class="card panel-conteiner">
     <form action="" class="add-panel">
-        <input type="text" name="">
-        <input type="text" name="">
-        <input type="text" name="">
-        <input type="text" name="">
+        <h2>Añadir album</h2>
+        <label for="title">Inserte el titulo:</label>
+        <input type="text" name="title" id="title">
+        <label for="artist">Inserte el artista:</label>
+        <input type="text" name="artist" id="artist">
+        <label for="rel-date">Inserte la fecha de lanzamiento:</label>
+        <input type="date" name="rel-date" id="rel-date">
+        <label for="genre">Inserte el genero del album:</label>
+        <input type="text" name="genre" id="genre">
+        <label for="review">Inserte la review:</label>
+        <input type="text" name="review" id="review">
+        <label for="rating">Inserte el rating del album: (de 0 al 5)</label>
+        <input type="float" name="rating" id="rating" min="0" max="5">
+        <button type="submit" class="button">AGREGAR</button>
     </form>
+    <div class="modify">
+        <h4>Elija el album a modificar</h4>
+        <?php
+        require './template/album_select.phtml';
+        $album = null; //Vuelvo null al album por que si no por default carga el form de modificar con los datos del ultimo album recorrido en el foreach?>
+        <div class="modify_container"><?php require_once "./template/modify_form.phtml"?></div>
+    </div>
+    <div class="delete">
+        <form action="" id="delete-selection">
+            <label for="album">Elija el album a eliminar</label>
+            <?php require './template/album_select.phtml'; ?>
+            <button type="submit" class="button">ELIMINAR</button>
+        </form>
+    </div>
 </div>

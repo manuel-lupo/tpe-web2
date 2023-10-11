@@ -31,7 +31,13 @@ class Album_controller{
     }
 
     public function showAdminPanel(){
-        $this->view->renderAdminPanel();
+        $albums = $this->album_model->getAlbums();
+        $this->view->renderAdminPanel($albums);
+    }
+
+    public function showModifyForm($album_id){
+        $album = $this->album_model->getAlbumById($album_id);
+        $this->view->renderModifyForm($album);
     }
 
 }

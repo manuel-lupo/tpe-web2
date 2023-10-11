@@ -1,0 +1,16 @@
+<form action="" class="modify-panel">
+        <h2>Modificar <?= (isset($album)) ? "{$album->getTitle()}" : "album" ?></h2>
+        <label for="title">Inserte el titulo:</label>
+        <input type="text" name="title" id="title" <?= (isset($album)) ? "value='" .$album->getTitle() . "'" : "disabled" ?>>
+        <label for="artist">Inserte el artista:</label>
+        <input type="text" name="artist" id="artist" <?=(isset($album)) ? "value='" .$album->getArtist() . "'" : "disabled"  ?>>
+        <label for="rel-date">Inserte la fecha de lanzamiento:</label>
+        <input type="date" name="rel-date" id="rel-date" <?=(isset($album)) ? "value='" .$album->getRel_date() . "'" : "disabled"  ?>>
+        <label for="genre">Inserte el genero del album:</label>
+        <input type="text" name="genre" id="genre" <?=(isset($album)) ? "value='" .$album->getGenre() . "'" : "disabled"  ?>>
+        <label for="review">Inserte la review:</label>
+        <input type="text" name="review" id="review" <?=(isset($album)) ? "value='" .$album->getReview() . "'" : "disabled"  ?>>
+        <label for="rating">Inserte el rating del album: (de 0 al 5)</label>
+        <input type="float" name="rating" id="rating" min="0" max="5" <?=(isset($album)) ? "value='" .$album->getRating() . "'" : "disabled"  ?>>
+        <button type="submit" class="button">MODIFICAR</button>
+</form>
