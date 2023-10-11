@@ -47,7 +47,7 @@ try {
             if ($params[1] == 'albums')
                 $album_controller->showAdminPanel();
             if ($params[1] == 'songs')
-                $main_controller->show404();
+                $songs_controller->showSongsABM();
             break;
         case 'request':
             if (empty($_POST['type']))
@@ -84,7 +84,9 @@ try {
                 case 'album':
                     # code...
                     break;
-
+                case 'song':
+                    $songs_controller->addSong();
+                    break;
                 default:
                     header("Location: /home");
                     break;
@@ -96,7 +98,9 @@ try {
                     if (isset($_POST['album']))
                         $album_controller->deleteAlbum($_POST['album']);
                     break;
-
+                case 'song':
+                    $songs_controller->deleteSong();
+                    break;
                 default:
                     header("Location: /home");
                     break;
@@ -108,7 +112,9 @@ try {
                     if (isset($_POST['album']))
                         //$album_controller->deleteAlbum($_POST['album']);
                     break;
-
+                case 'song':
+                    $songs_controller->updateSong();
+                    break;
                 default:
                     header("Location: /home");
                     break;

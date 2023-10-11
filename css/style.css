@@ -444,11 +444,6 @@ footer{
     justify-content: center;
     padding-left: 5%;
 }
-table{
-    display: block;
-    overflow-y: scroll;
-    height: 100%;
-}
 
 .search_song_container{
     content: "";
@@ -565,4 +560,30 @@ h3 .search_song_container{
 
 #delete-selection>*{
     margin: 0.5rem 0;
+}
+
+/* Estilos de abm songs */
+
+.abm_page_container{
+    display: flex;
+}
+
+.insert_song_form{
+    width: 28rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete_song_card{
+    width: 38rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 .delete_song_card{
+    margin-bottom: 5rem;
 }

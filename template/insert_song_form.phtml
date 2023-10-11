@@ -1,0 +1,22 @@
+<form class="insert_song_form card" method="POST" action="add/song">
+    <h3>Añadir una canción a la página:</h3>
+    <div class="mb-3">
+        <label class="form-label">Title:</label>
+        <input type="text" name="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Release date: </label>
+        <input type="date" name="release_date" class="form-control" placeholder="Release date">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Album: </label>
+        <?php require_once 'template/album_select.phtml'?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Lyric: </label>
+        <textarea name="lyric" rows="5" cols="50" placeholder="Lyric"></textarea>
+    </div>
+    <div class="login_buttons">
+        <button type="submit" class="btn btn-primary button alt">Añadir</button>
+    </div>
+</form>

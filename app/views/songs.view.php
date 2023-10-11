@@ -19,9 +19,9 @@ class Songs_view {
         require_once './template/song_card.phtml';
     }
 
-    public function renderABM($albums){
+    public function renderABM($albums, $songs){
         require_once './template/header.phtml';
-        require_once './template/inser_song_form.phtml';
+        require_once './template/abm_songs_page.phtml';
         require_once './template/footer.phtml';
     }
 }
