@@ -16,16 +16,16 @@ class songs_controller {
         $this->album_model = new Album_model();
     }
 
-    public function searchSongs(){
-        $this->model->getSongsByAlbum($id);
-        $this->view->searchSongs();
-    }
-
     public function showSongs(){
         $songs = $this->model->getSongs();
         $this->view->renderSongs($songs, function($id){
             return $this->getAlbumTitle($id);
         });
+    }
+    
+    public function searchSongs(){
+        $this->model->getSongsByAlbum($id);
+        $this->view->searchSongs();
     }
 
     private function getAlbumTitle($id) {
@@ -41,6 +41,12 @@ class songs_controller {
     public function showLyric($id){
         $song = $this->model->getSongById($id);
         $this->view->renderLyric($song, $this->getAlbumArtist($song->getAlbum_id()));
+    }
+
+    public function showSongsABM(){
+        $album = $this->album_model->getAlbums();
+        $song = $this->model->getSongs();
+        $this->view->renderABM($album);
     }
 
     public function show404(){
