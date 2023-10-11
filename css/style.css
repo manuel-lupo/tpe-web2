@@ -444,11 +444,6 @@ footer{
     justify-content: center;
     padding-left: 5%;
 }
-table{
-    display: block;
-    overflow-y: scroll;
-    height: 100%;
-}
 
 .search_song_container{
     content: "";
