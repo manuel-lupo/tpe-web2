@@ -27,6 +27,11 @@ class songs_controller {
         $this->model->getSongsByAlbum($id);
         $this->view->searchSongs();
     }
+    
+    public function searchSongs(){
+        $this->model->getSongsByAlbum($id);
+        $this->view->searchSongs();
+    }
 
     private function getAlbumTitle($id) {
         $album = $this->album_model->getAlbumById($id);
