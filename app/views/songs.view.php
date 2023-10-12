@@ -18,4 +18,15 @@ class Songs_view {
     public function renderLyric($song, $artist){
         require_once './template/song_card.phtml';
     }
+
+    public function renderABM($albums, $songs){
+        $action = "admin_songs";
+        require_once './template/header.phtml';
+        require_once './template/abm_songs_page.phtml';
+        require_once './template/footer.phtml';
+    }
+
+    public function renderModifyForm($song){
+        require_once './template/modify_song_form.phtml';
+    }
 }

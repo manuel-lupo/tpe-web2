@@ -1,0 +1,6 @@
+<select name="song" id="song_select">
+    <option value="Seleccione una opcion" selected disabled>Seleccione una opcion</option>
+    <?php foreach ($songs as $song) {
+    ?><option value="<?= $song->getId() ?>"><?= $song->getTitle() ?></option>
+    <?php } ?>
+</select>

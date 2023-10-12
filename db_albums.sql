@@ -119,66 +119,66 @@ INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`)
 INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('ruido de lluvia en el bosque','2006/10/9','asaxdxdxdsdsd','henry macdonald','ambient','4');
 INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`) VALUES ('delicate steve','2022/10/9','asasdsdsfsd','steve delicate','r&b','3');
 
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('FRUTO','2023/10/9','1', "El día de mi suerte, yeah
-Sé que antes de mi muerte
-Seguro que mi suerte cambiará
-
-Soy el fruto del hustle del oeste
-Y no niego extrañar un poco el ante'
-Debo buscar la paz en quien no reste
-Quien no me reste, yeah-eh
-
-Me cansé, odio tantas pregunta'
-Cambié, pero no me disgusta
-Sabía que iba a pasar desde los doce
-Y, desde entonce', al gloria y hasta nunca
-
-Me cansé, odio tantas pregunta'
-Cambié, pero no me disgusta
-Sabía que iba a pasar desde los doce
-Y, desde entonce', al gloria y hasta nunca
-
-Right now
-Mis manos si caen, se levantan
-Vi hermanos mostrar cómo cambian
-Aldana llorando en mi show
-Abrazos que tocan el alma
-Cuando no encontraba el color (yeah)
-Mi mente pintó como un arma
-Vi perra', rata' y larva'
-Pero vi un destino mejor
-
-Cuál hay si quisiera una vida sana
-Y económicamente buena
-Salir un rato de las mala'
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('FRUTO','2023/10/9','1', "El día de mi suerte, yeah <br>
+Sé que antes de mi muerte<br>
+Seguro que mi suerte cambiará<br>
+<br>
+Soy el fruto del hustle del oeste<br>
+Y no niego extrañar un poco el ante'<br>
+Debo buscar la paz en quien no reste<br>
+Quien no me reste, yeah-eh<br>
+<br>
+Me cansé, odio tantas pregunta'<br>
+Cambié, pero no me disgusta<br>
+Sabía que iba a pasar desde los doce<br>
+Y, desde entonce', al gloria y hasta nunca<br>
+<br>
+Me cansé, odio tantas pregunta'<br>
+Cambié, pero no me disgusta<br>
+Sabía que iba a pasar desde los doce<br>
+Y, desde entonce', al gloria y hasta nunca<br>
+<br>
+Right now<br>
+Mis manos si caen, se levantan<br>
+Vi hermanos mostrar cómo cambian<br>
+Aldana llorando en mi show<br>
+Abrazos que tocan el alma<br>
+Cuando no encontraba el color (yeah)<br>
+Mi mente pintó como un arma<br>
+Vi perra', rata' y larva'<br>
+Pero vi un destino mejor<br>
+<br>
+Cuál hay si quisiera una vida sana<br>
+Y económicamente buena<br>
+Salir un rato de las mala'<br>
 A unos cuanto guacho' por sapos
-Los hicieron saltar cual rana
-Me cansé de escuchar los cortes
-Los socorro y también las bala'
-
-Cuál hay si quisiera una vida sana
-Y económicamente buena
-Salir un rato de las mala'
-A unos cuanto guacho' por sapos
-Los hicieron saltar cual rana
-Me cansé de escuchar los cortes
-Los socorro y también las bala'
-
-Me cansé, odio tantas pregunta'
-Cambié, pero no me disgusta
-Sabía que iba a pasar desde los doce
-Y, desde entonce', al gloria y hasta nunca
-
-Me cansé, odio tantas pregunta'
-Cambié, pero no me disgusta
-Sabía que iba a pasar desde los doce
-Y, desde entonce', al gloria y hasta nunca
-
-(Bizarrap)
-
-Soy el fruto del hustle del oeste
-Y no niego extrañar un poco el ante'
-Debo buscar la paz en quien no reste
+Los hicieron saltar cual rana<br>
+Me cansé de escuchar los cortes<br>
+Los socorro y también las bala'<br>
+<br>
+Cuál hay si quisiera una vida sana<br>
+Y económicamente buena<br>
+Salir un rato de las mala'<br>
+A unos cuanto guacho' por sapos<br>
+Los hicieron saltar cual rana<br>
+Me cansé de escuchar los cortes<br>
+Los socorro y también las bala'<br>
+<br>
+Me cansé, odio tantas pregunta'<br>
+Cambié, pero no me disgusta<br>
+Sabía que iba a pasar desde los doce<br>
+Y, desde entonce', al gloria y hasta nunca<br>
+<br>
+Me cansé, odio tantas pregunta'<br>
+Cambié, pero no me disgusta<br>
+Sabía que iba a pasar desde los doce<br>
+Y, desde entonce', al gloria y hasta nunca<br>
+<br>
+(Bizarrap)<br>
+<br>
+Soy el fruto del hustle del oeste<br>
+Y no niego extrañar un poco el ante'<br>
+Debo buscar la paz en quien no reste<br>
 Quien no me reste, yeah-eh");
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('OTURF','2023/10/9','1', "El día de mi suerte, yeah
 Sé que antes de mi muerte

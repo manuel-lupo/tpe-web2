@@ -493,6 +493,7 @@ h3 .search_song_container{
 
 .lyric{
     max-height: 22.4rem;
+    text-align: center;
 }
 
 
@@ -565,4 +566,38 @@ main:has(.panel-conteiner){
     justify-content: center;
     align-items: center;
     padding: 0 0.5rem;
+}
+
+/* Estilos de abm songs */
+
+.abm_page_container{
+    display: flex;
+}
+
+.insert_song_form{
+    width: 28rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete_song_card{
+    width: 38rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 .delete_song_card{
+    margin-bottom: 5rem;
+}
+
+.modify_panel{
+    width: 28rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

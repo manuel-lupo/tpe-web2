@@ -1,0 +1,13 @@
+<div class="modify_container">      
+    <form action="" class="modify-panel">
+        <h2>Modificar <?= (isset($song)) ? "{$song->getTitle()}" : "cancion" ?></h2>
+            <label for="title">Inserte el titulo:</label>
+            <input type="text" name="title" id="title" <?= (isset($song)) ? "value='" .$song->getTitle() . "'" : "disabled" ?>>
+            <label for="rel-date">Inserte la fecha de lanzamiento:</label>
+            <input type="date" name="rel-date" id="rel-date" <?=(isset($song)) ? "value='" .$song->getRel_date() . "'" : "disabled"  ?>>
+            <label for="lyric">Inserte la letra:</label>
+            <input type="text" name="lyric" id="lyric" <?=(isset($song)) ? "value='" .$song->getLyrics() . "'" : "disabled"  ?>>
+            <button type="submit" class="button">Modificar</button>
+    </form>
+</div>
+
