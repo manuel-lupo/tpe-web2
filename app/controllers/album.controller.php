@@ -41,9 +41,12 @@ class Album_controller{
     }
 
     public function deleteAlbum($id){
-        $this->album_model->deleteAlbum($id);
-
-        header("Location: " . BASE_URL . "/albums");
+        try {
+            $this->album_model->deleteAlbum($id);
+            header("Location: " . BASE_URL . "/albums");
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     public function addAlbum(){
