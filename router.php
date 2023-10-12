@@ -77,6 +77,12 @@ try {
                     else
                         throw new Exception("No se ha proporcionado una id", 1);
                     break;
+                case 'get_modify_song':
+                    if (!empty($_POST['id']))
+                    $songs_controller->updateSong($_POST['id']);
+                else
+                    throw new Exception("No se ha proporcionado una id", 1);
+                break;
             }
             break;
         case 'add':
@@ -113,7 +119,7 @@ try {
                         //$album_controller->deleteAlbum($_POST['album']);
                     break;
                 case 'song':
-                    $songs_controller->updateSong();
+                    //$songs_controller->updateSong();
                     break;
                 default:
                     header("Location: /home");

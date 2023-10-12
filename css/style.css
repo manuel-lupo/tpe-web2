@@ -587,3 +587,11 @@ h3 .search_song_container{
 h3 .delete_song_card{
     margin-bottom: 5rem;
 }
+
+.modify_panel{
+    width: 28rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
