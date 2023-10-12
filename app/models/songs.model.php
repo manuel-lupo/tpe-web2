@@ -24,4 +24,15 @@ class Songs_model{
         $query->execute([$id]);
         return $query->fetchAll(PDO::FETCH_CLASS, 'Song')[0];
     }
+
+    public function addSong($title, $release_date, $album, $lyric){
+        $query = $this->db->prepare('INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES (?,?,?,?)');
+        $query->execute([$title, $release_date, $album, $lyric]);
+        return $this->db->lastInsertId();
+    }
+
+    public function deleteSong($id){
+        $query = $this->db->prepare('DELETE FROM `Songs` WHERE id = ?');
+        $query->execute([$id]);
+    }
 }

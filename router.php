@@ -50,13 +50,17 @@ try {
             if ($params[1] == 'albums')
                 $album_controller->showAdminPanel();
             if ($params[1] == 'songs')
-                $main_controller->show404();
+                $songs_controller->showSongsABM();
             break;
 
         case 'add':
             switch ($params[1]) {
                 case 'album':
                     $album_controller->addAlbum();
+                    break;
+
+                case 'song':
+                    $songs_controller->addSong();
                     break;
 
                 default:
@@ -71,6 +75,11 @@ try {
                     if (isset($_POST['album']))
                         $album_controller->deleteAlbum($_POST['album']);
                     break;
+                case 'song':
+                    if (isset($_POST['song']))
+                        $songs_controller->deleteSong();
+                    break;
+
 
                 default:
                     header("Location: /home");
@@ -83,6 +92,9 @@ try {
                 case 'album':
                     if (isset($_POST['album']))
                         $album_controller->updateAlbum();
+                    break;
+                case 'song':
+                    //$songs_controller->updateSong();
                     break;
 
                 default:
@@ -127,11 +139,13 @@ try {
                     else
                         throw new Exception("No se ha proporcionado una id", 1);
                     break;
+                case 'get_modify_song':
+                    if (!empty($_POST['id']))
+                        $songs_controller->updateSong($_POST['id']);
+                    else
+                        throw new Exception("No se ha proporcionado una id", 1);
+                    break;
             }
-            break;
-
-        default:
-            $main_controller->show404();
             break;
     }
 } catch (\Throwable $th) {

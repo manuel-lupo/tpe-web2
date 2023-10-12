@@ -45,7 +45,7 @@ class Album_controller{
             $this->album_model->deleteAlbum($id);
             header("Location: " . BASE_URL . "/albums");
         } catch (\Throwable $th) {
-            //throw $th;
+            
         }
     }
 
