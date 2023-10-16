@@ -1,14 +1,14 @@
 <table class="table table-success table-striped">
     <tr>
-        <td>Title</td>
-        <td>Release date</td>
-        <td>Album</td>    
+        <td><b>TITLE:</b></td>
+        <td><b>RELEASE DATE:</b></td>
+        <td><b>ALBUM:</b></td>    
     </tr>
     <?php foreach ($songs as $song){?>
         <tr data-id="<?= $song->getId() ?>" id="song_row">
-            <td> <?=$song->getTitle()?> </td> 
-            <td> <?=$song->getRel_date()?> </td>
-            <td> <?=$titleGetter($song->getAlbum_Id())?></td>
+            <td><?=$song->getTitle()?></td> 
+            <td><?=$song->getRel_date()?></td>
+            <td><?=$titleGetter($song->getAlbum_Id())?></td>
         </tr>
     <?php } ?>
 </table>

@@ -2,13 +2,15 @@
     <form action="delete/song" method="POST" class="insert_song_form card">
         <h3>Borrar una canción de la página</h3>
         <label>Canción:</label>
-        <select name="song" id="album_select">
-            <option value="Seleccione una opcion" selected disabled>Seleccione una opcion</option>
-            <?php foreach ($songs as $song) {
-                ?><option value="<?= $song->getId() ?>"><?= $song->getTitle() ?></option>
-                <?php } ?>
-        </select>
-        <div class="login_buttons">
+        <div class="select_container">
+            <select name="song" id="album_select">
+                <option value="Seleccione una opcion" selected disabled>Seleccione una opcion</option>
+                <?php foreach ($songs as $song) {
+                    ?><option value="<?= $song->getId() ?>"><?= $song->getTitle() ?></option>
+                    <?php } ?>
+            </select>
+        </div>
+        <div class="login_buttons delete_button">
             <button type="submit" class="btn btn-primary button alt">Borrar</button>
         </div>
     </form>

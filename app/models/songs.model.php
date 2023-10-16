@@ -35,4 +35,9 @@ class Songs_model{
         $query = $this->db->prepare('DELETE FROM `Songs` WHERE id = ?');
         $query->execute([$id]);
     }
+
+    public function updateSong($title, $release_date, $lyric, $id){
+        $query= $this->db->prepare('UPDATE `Songs` SET `title`= ?,`rel_date`= ?,`lyrics`= ? WHERE id = ?');
+        $query->execute([$title, $release_date, $lyric, $id]);
+    }
 }

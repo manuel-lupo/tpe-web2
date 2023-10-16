@@ -1,13 +1,21 @@
-<div class="modify_container">      
-    <form action="" class="modify-panel">
-        <h2>Modificar <?= (isset($song)) ? "{$song->getTitle()}" : "cancion" ?></h2>
-            <label for="title">Inserte el titulo:</label>
-            <input type="text" name="title" id="title" <?= (isset($song)) ? "value='" .$song->getTitle() . "'" : "disabled" ?>>
+<div class="modify_song_container">      
+    <form action="update/song" method="POST" class="modify-panel">
+        <h4 class="modify_song_title">Modificar: <?= (isset($song)) ? "{$song->getTitle()}" : "cancion" ?></h4>
+        <label for="title">Inserte el titulo:</label>
+        <div class="modify_content_container">
+                <input type="text" name="title" id="title" <?= (isset($song)) ? "value='" .$song->getTitle() . "'" : "disabled" ?>>
+            </div>
             <label for="rel-date">Inserte la fecha de lanzamiento:</label>
-            <input type="date" name="rel-date" id="rel-date" <?=(isset($song)) ? "value='" .$song->getRel_date() . "'" : "disabled"  ?>>
+            <div class="modify_content_container">
+                <input type="date" name="rel-date" id="rel-date" <?=(isset($song)) ? "value='" .$song->getRel_date() . "'" : "disabled"  ?>>
+            </div>
             <label for="lyric">Inserte la letra:</label>
-            <input type="text" name="lyric" id="lyric" <?=(isset($song)) ? "value='" .$song->getLyrics() . "'" : "disabled"  ?>>
-            <button type="submit" class="button">Modificar</button>
+            <div class="modify_content_container">
+                <textarea type="text" name="lyric" rows="5" cols="50" id="lyric" <?=(isset($song)) ? "value='" .$song->getLyrics() . "'" : "disabled"  ?>></textarea>
+            </div>
+            <div class="modify_content_container modify_button">
+                <button type="submit" class="btn btn-primary button alt">Modificar</button>
+            </div>
     </form>
 </div>
 

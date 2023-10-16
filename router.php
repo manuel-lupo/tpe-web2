@@ -21,7 +21,7 @@ try {
     }
 
     /* 'home' --> $main_controller->showHome();
-    Canciones -->  $songs_controller->showSongs();
+     'Canciones' -->  $songs_controller->showSongs();
     'albums' --> $album_controller->showAlbumList();
     'albums/id' --> $album_controller->showAlbum(id);
     'administracion/albums' --> $album_controller->showAlbumAdminPanel();
@@ -80,7 +80,6 @@ try {
                         $songs_controller->deleteSong();
                     break;
 
-
                 default:
                     header("Location: /home");
                     break;
@@ -94,7 +93,7 @@ try {
                         $album_controller->updateAlbum();
                     break;
                 case 'song':
-                    //$songs_controller->updateSong();
+                    $songs_controller->modifySong();
                     break;
 
                 default:
@@ -141,7 +140,7 @@ try {
                     break;
                 case 'get_modify_song':
                     if (!empty($_POST['id']))
-                        $songs_controller->updateSong($_POST['id']);
+                        $songs_controller->showUpdateSong($_POST['id']);
                     else
                         throw new Exception("No se ha proporcionado una id", 1);
                     break;
