@@ -633,7 +633,7 @@ h3 .delete_song_card{
     margin-top: 9%;
 }
 
-.modify_container{
+.modify_song_container{
     display: flex;
     align-items: center;
 }

@@ -56,22 +56,15 @@ class songs_controller {
         $release_date = $_POST['release_date'];
         $album = $_POST['album'];
         $lyric = $_POST['lyric'];
-        //if (empty($title) || empty($release_date) || empty($album)) {
-          //  $this->view->showError("Debe completar todos los campos"); //esto igual se tiene que cambiar y hacer el view showError
-            //return;
-        //}
         $id = $this->model->addSong($title, $release_date, $album, $lyric);
         if ($id) {
             header('Location:' . BASE_URL . '/canciones');
-        } //else {
-            //$this->view->showError("Error al insertar la tarea"); //esto igual se tiene que cambiar y hacer el view showError
-        //}
+        } 
     }
 
     public function deleteSong(){
         $id = $_POST['song'];
         $this->model->deleteSong($id);
-        //hacer un chequeo de si quieres borrar la cancion
         header('Location: ' . BASE_URL . '/canciones');
     }
 
