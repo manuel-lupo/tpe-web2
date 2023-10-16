@@ -7,9 +7,4 @@ class Main_view{
         require_once './template/footer.phtml';
     }
 
-    public function render404(){
-        require_once './template/header.phtml';
-        echo 'ERROR 404 NOT FOUND';
-        require_once './template/footer.phtml';
-    }
 }

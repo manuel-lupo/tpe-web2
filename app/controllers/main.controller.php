@@ -1,10 +1,12 @@
 <?php
     require_once './app/views/main.view.php';
     require_once "./app/models/album.model.php";
+    require_once './app/views/error.view.php';
     
     class Main_controller{
         private $view;
         private $model;
+        private $error_view;
 
         public function __construct(){
             $this->view = new Main_view();
@@ -17,6 +19,6 @@
         }
 
         public function show404(){
-            $this->view->render404();
+            $this->error_view->showError404();
         }
     }
