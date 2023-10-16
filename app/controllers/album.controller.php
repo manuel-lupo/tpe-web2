@@ -31,6 +31,7 @@ class Album_controller{
     }
 
     public function showAdminPanel(){
+        AuthHelper::verify();
         $albums = $this->album_model->getAlbums();
         $this->view->renderAdminPanel($albums);
     }
