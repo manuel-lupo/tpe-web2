@@ -50,6 +50,7 @@ class songs_controller {
     }
 
     public function showSongsABM(){
+        AuthHelper::verify();
         $albums = $this->album_model->getAlbums();
         $songs = $this->model->getSongs();
         $this->view->renderABM($albums, $songs);
