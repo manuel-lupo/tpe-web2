@@ -10,18 +10,21 @@ class songs_controller {
     private $model;
     private $view;
     private $album_model;
+    private $main_view;
 
     public function __construct(){
         $this->model = new Songs_model();
         $this->view = new Songs_view();
         $this->album_model = new Album_model();
+        $this->main_view = new Main_view();
     }
 
     public function showSongs(){
         if(!empty($_GET["search_input"])){
             $songs = $this->model->getFilteredSongs($_GET["search_input"]);
             if(count($songs) == 0){
-                showError()
+                $this->main_view->showError("No se encontró ninguna canción.", $_GET["action"]);
+                die();
             }
         }else{
             $songs = $this->model->getSongs();
