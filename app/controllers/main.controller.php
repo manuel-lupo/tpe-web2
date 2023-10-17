@@ -1,7 +1,6 @@
 <?php
     require_once './app/views/main.view.php';
     require_once "./app/models/album.model.php";
-    require_once './app/views/error.view.php';
     
     class Main_controller{
         private $view;

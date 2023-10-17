@@ -4,13 +4,12 @@ require_once './app/views/songs.view.php';
 require_once './app/models/songs.model.php';
 require_once './app/models/album.model.php';
 require_once './app/objects/Album.php';
-require_once './app/views/error.view.php';
+require_once './app/views/main.view.php';
 
 class songs_controller {
     private $model;
     private $view;
     private $album_model;
-    private $error_view;
 
     public function __construct(){
         $this->model = new Songs_model();
@@ -19,15 +18,17 @@ class songs_controller {
     }
 
     public function showSongs(){
-        $songs = $this->model->getSongs();
+        if(!empty($_GET["search_input"])){
+            $songs = $this->model->getFilteredSongs($_GET["search_input"]);
+            if(count($songs) == 0){
+                showError()
+            }
+        }else{
+            $songs = $this->model->getSongs();
+        }
         $this->view->renderSongs($songs, function($id){
             return $this->getAlbumTitle($id);
         });
-    }
-    
-    public function searchSongs(){
-        $this->model->getSongsByAlbum($id);
-        $this->view->searchSongs();
     }
 
     private function getAlbumTitle($id) {
@@ -75,15 +76,12 @@ class songs_controller {
 
     public function modifySong(){
         $title = $_POST['title'];
-        $release_date = $_POST['release_date'];
+        $rel_date = $_POST['rel-date'];
         $lyric = $_POST['lyric'];
         $id = $_POST['song'];
 
-        $this->model->updateSong($title, $release_date, $lyric, $id);
+        $this->model->updateSong($title, $rel_date, $lyric, $id);
         header("Location: " . BASE_URL . "/canciones");
     }
     
-    public function show404(){
-        $this->error_view->showError404();
-    }
 }

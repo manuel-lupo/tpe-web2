@@ -1,7 +1,13 @@
 <div class="modify_panel card">
     <h4>Elija la canción a modificar</h4>
-    <?php require './template/song_select.phtml';
-    $song = null; 
-    require_once './template/modify_song_form.phtml';    
-    ?>
+    <form action="update/song" method="POST" class="modify-form">
+        <?php require_once './template/song_select.phtml';
+        $song = null; 
+        ?>
+        <div class="modify_song_container">  
+            <?php
+            require_once './template/modify_song_form.phtml';    
+            ?>
+        </div>
+    </form>
  </div>

@@ -446,6 +446,10 @@ footer{
     justify-content: center;
 }
 
+.songs_table tr, .songs_table td{
+    height: 1rem;
+}
+
 .search_song_container{
     content: "";
     flex: auto;
@@ -614,7 +618,7 @@ h3 .delete_song_card{
     align-items: center;
     margin: 1%;
 }
-.modify-panel{
+.modify-form{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -631,9 +635,4 @@ h3 .delete_song_card{
 
 .modify_button{
     margin-top: 9%;
-}
-
-.modify_song_container{
-    display: flex;
-    align-items: center;
 }

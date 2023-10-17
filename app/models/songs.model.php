@@ -19,6 +19,12 @@ class Songs_model{
         return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
     }
 
+    public function getFilteredSongs($string){
+        $query = $this->db->prepare('SELECT * FROM Songs WHERE title LIKE ?');
+        $query->execute([$string . "%"]);
+        return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
+    }
+
     public function getSongById($id){
         $query = $this->db->prepare('SELECT * FROM Songs WHERE id= ?');
         $query->execute([$id]);
@@ -36,8 +42,8 @@ class Songs_model{
         $query->execute([$id]);
     }
 
-    public function updateSong($title, $release_date, $lyric, $id){
+    public function updateSong($title, $rel_date, $lyric, $id){
         $query= $this->db->prepare('UPDATE `Songs` SET `title`= ?,`rel_date`= ?,`lyrics`= ? WHERE id = ?');
-        $query->execute([$title, $release_date, $lyric, $id]);
+        $query->execute([$title, $rel_date, $lyric, $id]);
     }
 }
