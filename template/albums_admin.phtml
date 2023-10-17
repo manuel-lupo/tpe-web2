@@ -1,5 +1,5 @@
 <div class="panel-conteiner">
-    <form action="add/album" method="post" class="card add-panel">
+    <form action="add/album" method="post" enctype="multipart/form-data" class="card add-panel">
         <h2>Añadir album</h2>
         <label for="title">Inserte el titulo:</label>
         <input type="text" name="title" id="title">
@@ -13,10 +13,12 @@
         <input type="text" name="review" id="review">
         <label for="rating">Inserte el rating del album: (de 0 al 5)</label>
         <input type="float" name="rating" id="rating" min="0" max="5">
+        <label for="img">Subir imagen del album: </label>
+        <input type="file" name="img" id="img">
         <button type="submit" class="button">AGREGAR</button>
     </form>
     <div class="card modify">
-        <form action="update/album" method='post' class="modify-panel">
+        <form action="update/album" method='post' enctype="multipart/form-data" class="modify-panel">
             <h4>Elija el album a modificar</h4>
             <?php
             require './template/album_select.phtml';

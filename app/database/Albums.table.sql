@@ -4,10 +4,10 @@ CREATE TABLE `Albums` (
   `id` int NOT NULL,
   `title` varchar(45) NOT NULL,
   `rel_date` date DEFAULT NULL,
-  `review` text NOT NULL,
-  `artist` varchar(255) DEFAULT NULL,
+  `review` text DEFAULT NULL,
+  `artist` varchar(255) NOT NULL,
   `genre` varchar(255) DEFAULT NULL,
-  `rating` float DEFAULT NULL,
+  `rating` float NOT NULL,
   `img_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
