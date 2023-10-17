@@ -3,8 +3,8 @@
         <h3>Borrar una canción de la página</h3>
         <label>Canción:</label>
         <div class="select_container">
-            <select name="song" id="album_select">
-                <option value="Seleccione una opcion" selected disabled>Seleccione una opcion</option>
+            <select name="song">
+                <option value="Seleccione una opcion">Seleccione una opcion</option>
                 <?php foreach ($songs as $song) {
                     ?><option value="<?= $song->getId() ?>"><?= $song->getTitle() ?></option>
                     <?php } ?>

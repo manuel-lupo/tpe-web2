@@ -79,67 +79,58 @@ Soy el fruto del hustle del oeste<br>
 Y no niego extrañar un poco el ante'<br>
 Debo buscar la paz en quien no reste<br>
 Quien no me reste, yeah-eh");
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('OTURF','2023/10/9','1', "El día de mi suerte, yeah<br>
-Sé que antes de mi muerte<br>
-Seguro que mi suerte cambiará<br>
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('No soy eterno','2023/10/9','1', "(Fuiste mala, baby)<br>
+(No soy eterno, baby)<br>
 <br>
-Soy el fruto del hustle del oeste<br>
-Y no niego extrañar un poco el ante'<br>
-Debo buscar la paz en quien no reste<br>
-Quien no me reste, yeah-eh<br>
+Mi amor, solo pido paz mental, porque<br>
+Estoy perdiendo la fe y no me ayudas a olvidar<br>
+Tu pasado oscuro me hace mal y juro<br>
+Que estoy perdiendo la fe y no me ayudas a olvidar<br>
 <br>
-Me cansé, odio tantas pregunta'<br>
-Cambié, pero no me disgusta<br>
-Sabía que iba a pasar desde los doce<br>
-Y, desde entonce', al gloria y hasta nunca<br>
+Yo no soy tan fuerte para amarte y menos<br>
+Descifrar tu corazón<br>
+Eso no es excusa para tus excusas<br>
+Ante mi preocupación<br>
 <br>
-Me cansé, odio tantas pregunta'<br>
-Cambié, pero no me disgusta<br>
-Sabía que iba a pasar desde los doce<br>
-Y, desde entonce', al gloria y hasta nunca<br>
+Me mentiste, baby<br>
+No estoy bien, baby<br>
+Fuiste mala, baby<br>
+No soy eterno, baby<br>
 <br>
-Right now<br>
-Mis manos si caen, se levantan<br>
-Vi hermanos mostrar cómo cambian<br>
-Aldana llorando en mi show<br>
-Abrazos que tocan el alma<br>
-Cuando no encontraba el color (yeah)<br>
-Mi mente pintó como un arma<br>
-Vi perra', rata' y larva'<br>
-Pero vi un destino mejor<br>
+Me mentiste, baby<br>
+No estoy bien, baby<br>
+Fuiste mala, baby<br>
+No soy etеrno, baby<br>
 <br>
-Cuál hay si quisiera una vida sana<br>
-Y económicamente buena<br>
-Salir un rato de las mala'<br>
-A unos cuanto guacho' por sapos<br>
-Los hicieron saltar cual rana<br>
-Me cansé de escuchar los cortes<br>
-Los socorro y también las bala'<br>
+Sinceramente, apague еl wifi, no quiero escucharte<br>
+En este estado, no puedo contestar<br>
+Confío en usted, pero no en lo que no puedo ver<br>
+Y disocio de la realidad<br>
 <br>
-Cuál hay si quisiera una vida sana<br>
-Y económicamente buena<br>
-Salir un rato de las mala'<br>
-A unos cuanto guacho' por sapos<br>
-Los hicieron saltar cual rana<br>
-Me cansé de escuchar los cortes<br>
-Los socorro y también las bala'<br>
+No estoy tan loco, mai<br>
+Quiero entenderte, mai
+Pero sos la culpable de mi dudar al mirarte<br>
+Inseguridad por tú antes y tú ahora<br>
 <br>
-Me cansé, odio tantas pregunta'<br>
-Cambié, pero no me disgusta<br>
-Sabía que iba a pasar desde los doce<br>
-Y, desde entonce', al gloria y hasta nunca<br>
+Miro tu rostro y dudo si te conozco como yo pensaba<br>
+Tengo ese monstruo que me dice que hay otro enfrente de mi cara<br>
+Y también ese ángel que sabe, en el fondo, que vos no sos mala<br>
+Pero 'tás rara (pero 'tás rara, eh-eh)<br>
 <br>
-Me cansé, odio tantas pregunta'<br>
-Cambié, pero no me disgusta<br>
-Sabía que iba a pasar desde los doce<br>
-Y, desde entonce', al gloria y hasta nunca<br>
+Yo no soy tan fuerte para amarte y menos<br>
+Descifrar tu corazón<br>
+Eso no es excusa para tus excusas<br>
+Ante mi preocupación<br>
 <br>
-(Bizarrap)<br>
+Me mentiste, baby<br>
+No estoy bien, baby<br>
+Fuiste mala, baby<br>
+No soy eterno, baby<br>
 <br>
-Soy el fruto del hustle del oeste<br>
-Y no niego extrañar un poco el ante'<br>
-Debo buscar la paz en quien no reste<br>
-Quien no me reste, yeah-eh");
+Me mentiste, baby<br>
+No estoy bien, baby<br>
+Fuiste mala, baby<br>
+No soy etеrno, baby");
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('TOY EN EL MIC','2023/10/9','1', "Y ahora 'toy en el mic<br>
 Paco y cocaine, ese no es el huss<br>
 Pero estuve al la'o siempre<br>
@@ -284,18 +275,257 @@ Death seed, blind man's greed<br>
 Poets starving, children bleed<br>
 Nothing he's got, he really needs<br>
 21st century schizoid man");
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('THE COURT OF THE CRIMSON KING','2023/10/9','3');
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('epitaph','2023/10/9','3');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('THE COURT OF THE CRIMSON KING','2023/10/9','3', "… The rusted chains of prison moons<br>
+Are shattered by the sun<br>
+I walk a road horizons change<br>
+The tournament's begun<br>
+The purple piper plays his tune<br>
+The choir softly sing<br>
+Three lullabies in an ancient tongue<br>
+For the court of the crimson king<br>
+<br>
+… The keeper of the city keys<br>
+Puts shutters on the dreams<br>
+I wait outside the pilgrim's door<br>
+With insufficient schemes<br>
+The black queen chants the funeral march<br>
+The cracked brass bells will ring<br>
+To summon back the fire witch<br>
+To the court of the crimson king<br>
+<br>
+… The gardener plants an evergreen<br>
+Whilst trampling on a flower<br>
+I chase the wind of a prism ship<br>
+To taste the sweet and sour<br>
+The pattern juggler lifts his hand<br>
+The orchestra begin<br>
+As slowly turns the grinding wheel<br>
+In the court of the crimson king<br>
+<br>
+… On soft grey mornings widows cry<br>
+The wise men share a joke<br>
+I run to grasp divining signs<br>
+To satisfy the hoax<br>
+The yellow jester does not play<br>
+But gently pulls the strings<br>
+And smiles as the puppets dance<br>
+In the court of the crimson king");
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('epitaph','2023/10/9','3', "The wall on which the prophets wrote<br>
+Is cracking at the seams<br>
+Upon the instruments of death<br>
+The sunlight brightly gleams<br>
+<br>
+When every man is torn apart<br>
+With nightmares and with dreams<br>
+Will no one lay the laurel wreath<br>
+When silence drowns the screams<br>
+<br>
+Confusion will be my epitaph<br>
+As I crawl a cracked and broken path<br>
+If we make it, we can all sit back and laugh<br>
+But I fear tomorrow I'll be crying<br>
+Yes, I fear tomorrow I'll be crying<br>
+Yes, I fear tomorrow I'll be crying<br>
+<br>
+Between the iron gates of fate<br>
+The seeds of time were sown<br>
+And watered by the deeds of those<br>
+Who know and who are known<br>
+<br>
+Knowledge is a deadly friend<br>
+If no one sets the rules<br>
+The fate of all mankind, I see<br>
+Is in the hands of fools<br>
+<br>
+The wall on which the prophets wrote<br>
+Is cracking at the seams<br>
+Upon the instruments of death<br>
+The sunlight brightly gleams<br>
+<br>
+When every man is torn apart<br>
+With nightmares and with dreams<br>
+Will no one lay the laurel wreath<br>
+When silence drowns the screams?<br>
+<br>
+Confusion will be my epitaph<br>
+As I crawl a cracked and broken path<br>
+If we make it, we can all sit back and laugh<br>
+But I fear tomorrow I'll be crying<br>
+Yes, I fear tomorrow I'll be crying<br>
+Yes, I fear tomorrow I'll be crying<br>
+<br>
+Crying<br>
+Crying<br>
+<br>
+Yes, I fear tomorrow I'll be crying<br>
+Yes, I fear tomorrow I'll be crying<br>
+Yes, I fear tomorrow I'll be crying<br>
+Crying");
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('moonchild','2023/10/9','3');
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('POWER','2023/10/9','3');
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Jijiji','2023/10/9','2');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('POWER','2023/10/9','3', "I'm living in that 21st century<br>
+Doing something mean to it<br>
+Do it better than anybody you ever seen do it<br>
+Screams from the haters, got a nice ring to it<br>
+I guess every superhero need his theme music<br>
+<br>
+No one man should have all that power<br>
+The clock's ticking, I just count the hours<br>
+Stop tripping, I'm tripping off the power<br>
+(21st-century schizoid man)<br>
+<br>
+The system broken, and the school's closed, the prisons open<br>
+We ain't got nothin' to lose, ma'fucka, we rollin'<br>
+Huh? Ma'fucka, we rollin'<br>
+With some light-skinned girls and some Kelly Rowlands<br>
+In this white man's world, we the ones chosen<br>
+So goodnight, cruel world, I'll see you in the mornin'<br>
+Huh? I'll see you in the mornin'<br>
+This is way too much, I need a moment<br>
+<br>
+No one man should have all that power<br>
+The clock's ticking, I just count the hours<br>
+Stop tripping, I'm tripping off the power<br>
+'Til then, fuck that, the world's ours<br>
+<br>
+And they say, and they say<br>
+And they say, and they say<br>
+And they say, and they say<br>
+(21st-century schizoid man)<br>
+<br>
+Fuck SNL and the whole cast<br>
+Tell 'em Yeezy said they can kiss my whole ass<br>
+More specifically, they can kiss my asshole<br>
+I'm an asshole? You niggas got jokes<br>
+You short-minded niggas thoughts is Napoleon<br>
+My furs is Mongolian, my ice brought the goalies in<br>
+Now I embody every characteristic of the egotistic<br>
+He knows he so fuckin' gifted<br>
+I just needed time alone, with my own thoughts<br>
+Got treasures in my mind but couldn't open up my own vault<br>
+My childlike creativity, purity and honesty<br>
+Is honestly being crowded by these grown thoughts<br>
+Reality is catching up with me<br>
+Taking my inner child, I'm fighting for custody<br>
+With these responsibilities that they entrusted me<br>
+As I look down at my diamond encrusted piece<br>
+<br>
+Thinkin', no one man should have all that power<br>
+The clock's ticking, I just count the hours<br>
+Stop tripping, I'm tripping off the powder<br>
+'Til then, fuck that, the world's ours<br>
+<br>
+And they say, and they say<br>
+And they say, and they say<br>
+And they say, and they say<br>
+(21st-century schizoid man)<br>
+<br>
+Colin Powells, Austin Powers<br>
+Lost in translation with a whole fuckin' nation<br>
+They say I was the abomination of Obama's nation<br>
+Well that's a pretty bad way to start the conversation<br>
+At the end of the day, goddammit, I'm killin' this shit<br>
+I know damn well y'all feeling this shit<br>
+I don't need your pussy, bitch, I'm on my own dick<br>
+I ain't gotta power trip, who you goin' home with?<br>
+How 'Ye doing? I'm surviving<br>
+I was drinking earlier, now I'm driving<br>
+Where the bad bitches, huh? Where y'all hiding?<br>
+I got the power make your life so exciting<br>
+<br>
+Now this will be a beautiful death<br>
+I'm jumping out the window<br>
+I'm letting everything go<br>
+I'm letting everything go<br>
+Mmm, now this will be a beautiful death<br>
+I'm jumping out the window<br>
+I'm letting everything go<br>
+I'm letting everything go<br>
+Now this will be a beautiful death<br>
+Jumping out the window<br>
+Letting everything go<br>
+Letting everything go<br>
+You got the power to let power go?<br>
+(21st-century schizoid man)");
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('Jijiji','2023/10/9','2', "En este film velado en blanca noche<br>
+El hijo tenaz de tu enemigo<br>
+El muy verdugo cena distinguido<br>
+Una noche de cristal que se hace añicos<br>
+<br>
+No lo soñé<br>
+Se enderezó y brindó a tu suerte<br>
+<br>
+No lo soñé<br>
+Y se ofreció mejor que nunca<br>
+<br>
+No mires, por favor<br>
+Y no prendas la luz<br>
+La imagen te desfiguró<br>
+<br>
+Este film da una imagen exquisita<br>
+Esos chicos son como bombas pequeñitas<br>
+El peor camino a la cueva del perico<br>
+Para tipos que no duermen por la noche<br>
+<br>
+No lo soñé<br>
+Ibas corriendo a la deriva<br>
+<br>
+No lo soñé<br>
+Los ojos ciegos bien abiertos<br>
+<br>
+No mires, por favor<br>
+Y no prendas la luz<br>
+La imagen te desfiguró<br>
+¡Uh!<br>
+(solo de guitarra super epico)<br>
+<br>
+El montaje final es muy curioso<br>
+Es en verdad realmente entretenido<br>
+Vas en la oscura multitud, desprevenido<br>
+Tiranizando a quienes te han querido<br>
+<br>
+No lo soñé<br>
+Se enderezó y brindó a tu suerte<br>
+<br>
+No lo soñé<br>
+Y se ofreció mejor que nunca<br>
+<br>
+No lo soñé<br>
+Ibas corriendo a la deriva<br>
+<br>
+No lo soñé<br>
+Los ojos ciegos bien abiertos<br>
+<br>
+No mires, por favor<br>
+Y no prendas la luz<br>
+La imagen te desfiguró<br>
+<br>
+¡Chernobil, Chernobil, Chernobil!<br>
+<br>
+¡Chernobil, es Chernobil!<br>
+<br>
+¡Chernobil!");
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('fuegos de oktubre','2023/10/9','2');
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('noticias de ayer','2023/10/9','2');
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('vamos los redo','2023/10/9','2');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('vamos los redo','2023/10/9','2', "vamos los redooooo <br>
+ vamos los redooooo <br>
+ vamos los redooooo <br>
+ vamos los redooooo <br>
+<br>
+ vamos los redooooo <br> 
+ vamos los redooooo <br> 
+ vamos los redooooo <br>
+ vamos los redooooo <br>
+<br>
+(solo de guitarra)");
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Ruido de lluvia en el bosque','2023/10/9','4');
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('Delicate steve','2023/10/9','5');
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('scooby galletas','2023/10/9','5');
 INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('outro','2023/10/9','5');
-INSERT INTO `Songs`(`title`, `rel_date`, `album_id`) VALUES ('THE END','2023/10/9','5');
+INSERT INTO `Songs`(`title`, `rel_date`, `album_id`, `lyrics`) VALUES ('THE END','2023/10/9','5', "Oh yeah, all right<br>
+Are you going to be in my dreams<br>
+Tonight?<br>
+And in the end<br>
+The love you take<br>
+Is equal to the love you make");
 
 COMMIT;

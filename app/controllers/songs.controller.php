@@ -57,6 +57,10 @@ class songs_controller {
     }
 
     public function addSong(){
+        if(empty($_POST['title']) || empty($_POST['release_date']) || empty($_POST['album'])){
+            $this->main_view->showError("Falta completar alguno de los campos", "administracion/songs");
+            die();
+        }
         $title = $_POST['title'];
         $release_date = $_POST['release_date'];
         $album = $_POST['album'];
@@ -69,6 +73,10 @@ class songs_controller {
 
     public function deleteSong(){
         $id = $_POST['song'];
+        if($id == "Seleccione una opcion"){
+            $this->main_view->showError("No se eligió una canción para eliminar", "administracion/songs");
+            die();
+        }
         $this->model->deleteSong($id);
         header('Location: ' . BASE_URL . '/canciones');
     }
@@ -79,6 +87,10 @@ class songs_controller {
     }
 
     public function modifySong(){
+        if(empty($_POST['title']) || empty($_POST['release_date']) || empty($_POST['album'])){
+            $this->main_view->showError("Falta completar alguno de los campos", "administracion/songs");
+            die();
+        }
         $title = $_POST['title'];
         $rel_date = $_POST['rel-date'];
         $lyric = $_POST['lyric'];
