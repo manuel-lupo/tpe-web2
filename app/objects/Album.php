@@ -37,7 +37,7 @@ class Album{
 	 * @return string
 	 */
 	public function getImgUrl() {
-		return $this->genre;
+		return $this->img_url;
 	}
 
 	/**

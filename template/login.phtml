@@ -15,7 +15,9 @@
         <?php } ?>
         <div class="login_buttons">
             <button type="submit" class="btn btn-primary button alt">Login</button>
+            <?= ($_GET['action'] == 'auth') ? "<a href='home'>" : "" ?>
             <button type="button" class="btn btn-primary button" id="close_form">Cerrar</button>
+            <?= ($_GET['action'] == 'auth') ? "</a>" : "" ?>
         </div>
     </form>
 </div>
