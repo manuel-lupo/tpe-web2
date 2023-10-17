@@ -25,7 +25,10 @@ class Album_controller
 
     public function showAlbumList()
     {
-        $albums = $this->album_model->getAlbums();
+        if(!empty($_GET["search_input"]))
+            $albums = $this->album_model->getFilteredAlbums($_GET['search_input']);
+        else
+            $albums = $this->album_model->getAlbums();
         $this->view->renderAlbumList($albums);
     }
 

@@ -21,7 +21,7 @@ class songs_controller {
         if(!empty($_GET["search_input"])){
             $songs = $this->model->getFilteredSongs($_GET["search_input"]);
             if(count($songs) == 0){
-                showError()
+                //showError()
             }
         }else{
             $songs = $this->model->getSongs();

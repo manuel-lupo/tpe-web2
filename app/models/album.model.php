@@ -13,6 +13,12 @@ class Album_model{
         return $query->fetchAll(PDO::FETCH_CLASS, 'Album');
     }
 
+    public function getFilteredAlbums($string){
+        $query = $this->db->prepare('SELECT * FROM Albums WHERE title LIKE ?');
+        $query->execute(["%". $string . "%"]);
+        return $query->fetchAll(PDO::FETCH_CLASS, 'Album');
+    }
+
     public function getAlbumById($id){
         $query = $this->db->prepare('SELECT * FROM Albums WHERE id = ?');
         $query->setFetchMode(PDO::FETCH_CLASS, 'Album');
