@@ -46,7 +46,7 @@ try {
 
         case 'administracion':
             if (empty($params[1]))
-                $main_controller->show404();
+                $main_controller->showError("No se indicó qué se quiere administrar");
             if ($params[1] == 'albums')
                 $album_controller->showAdminPanel();
             if ($params[1] == 'songs')
@@ -147,7 +147,7 @@ try {
             }
             break;
         default:
-            $main_controller->show404();
+            $main_controller->showError("404");
             break;
     }
 } catch (\Throwable $th) {

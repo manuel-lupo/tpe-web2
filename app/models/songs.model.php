@@ -21,7 +21,7 @@ class Songs_model{
 
     public function getFilteredSongs($string){
         $query = $this->db->prepare('SELECT * FROM Songs WHERE title LIKE ?');
-        $query->execute([$string . "%"]);
+        $query->execute(["%" . $string . "%"]);
         return $query->fetchAll(PDO::FETCH_CLASS, 'Song');
     }
 

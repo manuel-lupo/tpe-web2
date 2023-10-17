@@ -7,8 +7,9 @@ class Main_view{
         require_once './template/footer.phtml';
     }
 
-    public function showError404(){
-        require_once './template/error_404.phtml';
+    public function showError($error, $location = NULL){
+        require_once './template/header.phtml';
+        require_once './template/show_error.phtml';
+        require_once './template/footer.phtml';
     }
-
 }
