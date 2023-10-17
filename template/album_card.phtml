@@ -2,7 +2,7 @@
     <h2><?=$album->getTitle()?></h2>
     <h6><?=$album->getArtist()?></h6>
     <!--Imagenes en la base de datos = WIP-->
-    <img src="" alt="" id="cover">
+    <img src="<?= $album->getImgUrl() ?>" alt=" <?= "Arte de tapa " . $album->getTitle() ?>" id="cover">
     <div class="rating">
         <?php require './template/rating_stars.phtml'; ?>
     </div>

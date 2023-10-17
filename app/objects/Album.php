@@ -2,6 +2,8 @@
 class Album{
     private $id;
     private $title;
+
+	private $img_url;
     private $rel_date;
     
     private $review;
@@ -13,7 +15,7 @@ class Album{
     private $rating;
 
     
-	public function setValues($title, $rel_date, $review, $artist, $genre, $rating){
+	public function setValues($title, $rel_date, $review, $artist, $genre, $rating, $img_url){
 		$this->id = null;		
 		$this->title = $title;
 		$this->rel_date = $rel_date;
@@ -21,6 +23,7 @@ class Album{
 		$this->artist = $artist;
 		$this->$genre = $genre;
 		$this->rating = $rating;
+		$this->img_url = $img_url;
 	}
 
 	/**
@@ -28,6 +31,13 @@ class Album{
 	 */
 	public function getRating() {
 		return $this->rating;
+	}
+
+		/**
+	 * @return string
+	 */
+	public function getImgUrl() {
+		return $this->genre;
 	}
 
 	/**
