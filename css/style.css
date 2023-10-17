@@ -545,9 +545,17 @@ h3 .search_song_container{
 
 .modify{
     grid-area: modify;
+    display: flex;
+    justify-content: center;
 }
 
-.panel-conteiner form>label{
+.modify-panel{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.panel-conteiner form>label, .modify label{
     width: 100%;
 }
 
