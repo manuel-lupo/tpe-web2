@@ -21,8 +21,13 @@ class Album_model{
     }
 
     public function deleteAlbum($id){
-        $query= $this->db->prepare('DELETE FROM Albums WHERE id = ?');
-        $query->execute([$id]);
+        try {
+            $query= $this->db->prepare('DELETE FROM Albums WHERE id = ?');
+            $query->execute([$id]);
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
     }
 
     public function updateAlbum($id , $album){

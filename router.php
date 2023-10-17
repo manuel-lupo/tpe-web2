@@ -146,7 +146,10 @@ try {
                     break;
             }
             break;
+        default:
+            $main_controller->show404();
+            break;
     }
 } catch (\Throwable $th) {
-    echo $th;
+    throw $th;
 }
