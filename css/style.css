@@ -37,6 +37,66 @@ body{
     padding: 0;
 }
 
+.card{
+    background-color: var(--color-lilac);
+    border-radius: 2.5625rem;
+    border: 3px solid #5E376D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.card>h2{
+    color: #5E376D;
+    text-align: center;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.21rem;
+}
+
+.card>h6{
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.21rem;
+}
+
+img#cover{
+    background-color: grey;
+    width: 7rem;
+    height: 7rem;
+}
+
+.rating{
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating img{
+    margin: 0 0.5rem;
+}
+
+.description{
+    height: 9rem;
+}
+
+.description>p{
+    text-align: center;
+    overflow-y: hidden;
+    max-height: 15vh;
+}
+
+.card-btn{
+    width: 7.2rem;
+    height: 3.1rem;
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 0.3rem;
@@ -240,70 +300,13 @@ main{
     align-items: center;
 }
 
-.card:nth-child(2){
+.cards .card:nth-child(2){
     height: 97%;
 }
 
-.card{
-    background-color: var(--color-lilac);
-    border-radius: 2.5625rem;
-    border: 3px solid #5E376D;
+.cards .card{
     height: 95%;
     width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1rem;
-}
-
-.card>h2{
-    color: #5E376D;
-    text-align: center;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 0.21rem;
-}
-
-.card>h6{
-    text-align: center;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.21rem;
-}
-
-img#cover{
-    background-color: grey;
-    width: 7rem;
-    height: 7rem;
-}
-
-.rating{
-    height: 3rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.rating img{
-    margin: 0 0.5rem;
-}
-
-.description{
-    height: 9rem;
-}
-
-.description>p{
-    text-align: center;
-    overflow-y: hidden;
-    max-height: 15vh;
-}
-
-.card-btn{
-    width: 7.2rem;
-    height: 3.1rem;
-    flex-shrink: 0;
-    align-self: flex-end;
 }
 
 .search{
@@ -536,11 +539,13 @@ h3 .search_song_container{
     grid-template-areas: 
     "add modify"
     "delete delete";
+    position: absolute;
+    padding: 0 2rem;
 }
 
 .add-panel{
-    width: 90%;
     grid-area: add;
+    align-items: flex-start;
 }
 
 .modify{
@@ -563,6 +568,10 @@ h3 .search_song_container{
     grid-area: delete;
     display: flex;
     justify-content: center;
+    align-self: center;
+    width: 20rem;
+    position: relative;
+    left: calc(50% - 10rem);
 }
 
 #delete-selection{
