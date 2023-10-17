@@ -1,10 +1,11 @@
 <section class="album_container">
     <div class="album_data">
-        <h2 class='title'><?php echo $album->getTitle();?></h2>
+        <h2 class='title'><?= $album->getTitle();?></h2>
         <img src="<?= $album->getImgUrl() ?>" alt=" <?= "Arte de tapa " . $album->getTitle() ?>" id="cover">        
-        <h3 class='artist'><?php echo $album->getArtist();?></h3>
+        <h3 class='artist'><?= $album->getArtist();?></h3>
         <div class="rating"><?php require './template/rating_stars.phtml'; ?></div>
-        <p class="description"><?php echo $album->getReview()?></p>
+        <p class="genre">Genero: <?= (!empty($album->getGenre())) ? $album->getGenre() : "No especificado" ?></p>
+        <p class="description"><?= $album->getReview()?></p>
     </div>
     <div class="album_songs scrolleable">
         <?php 

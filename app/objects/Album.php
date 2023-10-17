@@ -21,7 +21,7 @@ class Album{
 		$this->rel_date = $rel_date;
 		$this->review = $review;
 		$this->artist = $artist;
-		$this->$genre = $genre;
+		$this->genre = $genre;
 		$this->rating = $rating;
 		$this->img_url = $img_url;
 	}

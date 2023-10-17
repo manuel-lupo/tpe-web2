@@ -380,10 +380,14 @@ footer{
     margin: 0.75rem 0;
 }
 
-.album_data>p{
+.album_data>.description{
     margin: 2rem 0;
     overflow-y: scroll;
-    height: 15rem;
+    height: 13rem;
+}
+
+.album_data>.genre{
+    font-style: italic;
 }
 
 .album_data>.rating{

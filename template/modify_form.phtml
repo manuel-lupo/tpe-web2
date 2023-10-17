@@ -11,4 +11,6 @@
 <input type="text" name="review" id="review" <?= (isset($album)) ? "value='" . $album->getReview() . "'" : "disabled"  ?>>
 <label for="rating">Inserte el rating del album: (de 0 al 5)</label>
 <input type="float" name="rating" id="rating" min="0" max="5" <?= (isset($album)) ? "value='" . $album->getRating() . "'" : "disabled"  ?>>
+<label for="img">Subir imagen del album: </label>
+<input type="file" name="img" id="img" <?= (isset($album)) ? "": "disabled"  ?>>
 <button type="submit" class="button">MODIFICAR</button>
