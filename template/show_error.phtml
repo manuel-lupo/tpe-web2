@@ -1,0 +1,10 @@
+<?php
+if($error == "404"){
+    require_once 'template/error_404.phtml';
+}else{ ?>
+    <div class="show_error">
+        <h1>ERROR</h1>
+        <p> <?= $error ?></p>
+        <a href="<?=(!empty($location)) ? $location : "home" ?>"><button class="button">volver atrás</button></a>
+    </div>
+<?php } ?>

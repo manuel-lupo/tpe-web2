@@ -5,7 +5,6 @@
     class Main_controller{
         private $view;
         private $model;
-        private $error_view;
 
         public function __construct(){
             $this->view = new Main_view();
@@ -17,7 +16,7 @@
             $this->view->renderMain($albums);
         }
 
-        public function show404(){
-            $this->error_view->showError404();
+        public function showError($error, $location = NULL){
+            $this->view->showError($error, $location);
         }
     }

@@ -1,12 +1,13 @@
 <?php
 require_once './app/models/album.model.php';
 require_once './app/views/album.view.php';
+require_once './app/views/main.view.php';
 class Album_controller
 {
 
     private $view;
     private $album_model;
-
+    private $main_view;
     private $song_model;
 
     public function __construct()
@@ -14,6 +15,7 @@ class Album_controller
         $this->view = new Album_view();
         $this->album_model = new Album_model();
         $this->song_model = new Songs_model();
+        $this->main_view = new Main_view();
     }
 
     public function showAlbum($id)
@@ -56,7 +58,7 @@ class Album_controller
         if($this->album_model->deleteAlbum($id))
             header("Location: " . BASE_URL . "/albums");
         else{
-            //$main_view->showError("No se pudo eliminar el album, debe eliminar todas sus canciones primero")
+            $this->main_view->showError("No se pudo eliminar el album, debe eliminar todas sus canciones primero", "administracion/albums");
         }
     }
 
