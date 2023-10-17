@@ -27,9 +27,13 @@ class Album_controller
 
     public function showAlbumList()
     {
-        if(!empty($_GET["search_input"]))
+        if (!empty($_GET["search_input"])) {
             $albums = $this->album_model->getFilteredAlbums($_GET['search_input']);
-        else
+            if (count($albums) == 0) {
+                $this->main_view->showError('No se han encontrado resultados');
+                die();
+            }
+        } else
             $albums = $this->album_model->getAlbums();
         $this->view->renderAlbumList($albums);
     }
@@ -55,9 +59,9 @@ class Album_controller
 
     public function deleteAlbum($id)
     {
-        if($this->album_model->deleteAlbum($id))
+        if ($this->album_model->deleteAlbum($id))
             header("Location: " . BASE_URL . "/albums");
-        else{
+        else {
             $this->main_view->showError("No se pudo eliminar el album, debe eliminar todas sus canciones primero", "administracion/albums");
         }
     }
