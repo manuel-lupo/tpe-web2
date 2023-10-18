@@ -1,5 +1,10 @@
 <?php
 
+define("MYSQL_HOST","localhost");
+define("MYSQL_USER","root");
+define("MYSQL_DBASE","db_albums");
+define("MYSQL_PASS","");
+
 function DB_table_exists(PDO $db, $table){
 
     // Try a select statement against the table
@@ -15,9 +20,9 @@ function DB_table_exists(PDO $db, $table){
 }
 
 try {
-    $dbh = new PDO("mysql:host=localhost", 'root', '');
+    $dbh = new PDO("mysql:host=" . MYSQL_HOST, MYSQL_USER, MYSQL_PASS);
     $dbh->exec("CREATE DATABASE IF NOT EXISTS `db_albums`;");
-    $dbh = new PDO('mysql:host=localhost;dbname=db_albums;charset=utf8', 'root', '');
+    $dbh = new PDO('mysql:host=' . MYSQL_HOST .';dbname=' . MYSQL_DBASE .';charset=utf8', MYSQL_USER, MYSQL_PASS);
     if (!DB_table_exists($dbh, 'Albums'))
         $dbh->exec(file_get_contents('./app/database/Albums.table.sql'));
     if (!DB_table_exists($dbh, 'Songs'))

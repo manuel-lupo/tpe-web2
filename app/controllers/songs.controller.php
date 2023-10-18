@@ -6,74 +6,83 @@ require_once './app/models/album.model.php';
 require_once './app/objects/Album.php';
 require_once './app/views/main.view.php';
 
-class songs_controller {
+class songs_controller
+{
     private $model;
     private $view;
     private $album_model;
     private $main_view;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->model = new Songs_model();
         $this->view = new Songs_view();
         $this->album_model = new Album_model();
         $this->main_view = new Main_view();
     }
 
-    public function showSongs(){
-        if(!empty($_GET["search_input"])){
+    public function showSongs()
+    {
+        if (!empty($_GET["search_input"])) {
             $songs = $this->model->getFilteredSongs($_GET["search_input"]);
-            if(count($songs) == 0){
+            if (count($songs) == 0) {
                 $this->main_view->showError("No se encontró ninguna canción.", $_GET["action"]);
                 die();
             }
-        }else{
+        } else {
             $songs = $this->model->getSongs();
         }
-        $this->view->renderSongs($songs, function($id){
+        $this->view->renderSongs($songs, function ($id) {
             return $this->getAlbumTitle($id);
         });
     }
 
-    private function getAlbumTitle($id) {
+    private function getAlbumTitle($id)
+    {
         $album = $this->album_model->getAlbumById($id);
         return $album->getTitle();
     }
 
-    private function getAlbumArtist($id) {
+    private function getAlbumArtist($id)
+    {
         $album = $this->album_model->getAlbumById($id);
         return $album->getArtist();
     }
 
-    public function showLyric($id){
+    public function showLyric($id)
+    {
         $song = $this->model->getSongById($id);
         $this->view->renderLyric($song, $this->getAlbumArtist($song->getAlbum_id()));
     }
 
-    public function showSongsABM(){
+    public function showSongsABM()
+    {
         AuthHelper::verify();
         $albums = $this->album_model->getAlbums();
         $songs = $this->model->getSongs();
         $this->view->renderABM($albums, $songs);
     }
 
-    public function addSong(){
-        if(empty($_POST['title']) || empty($_POST['release_date']) || empty($_POST['album'])){
+    public function addSong()
+    {
+        if (empty($_POST['title']) || empty($_POST['album'])) {
             $this->main_view->showError("Falta completar alguno de los campos", "administracion/songs");
             die();
         }
         $title = $_POST['title'];
-        $release_date = $_POST['release_date'];
+        $release_date = (isset($_POST['rel-date'])) ? $_POST['rel-date'] : null;
+        $lyric = (isset($_POST['lyric'])) ? $_POST['lyric'] : null;
         $album = $_POST['album'];
-        $lyric = $_POST['lyric'];
         $id = $this->model->addSong($title, $release_date, $album, $lyric);
         if ($id) {
             header('Location:' . BASE_URL . '/canciones');
-        } 
+        }
     }
 
-    public function deleteSong(){
+    public function deleteSong()
+    {
         $id = $_POST['song'];
-        if($id == "Seleccione una opcion"){
+        if ($id == "Seleccione una opcion") {
             $this->main_view->showError("No se eligió una canción para eliminar", "administracion/songs");
             die();
         }
@@ -81,23 +90,24 @@ class songs_controller {
         header('Location: ' . BASE_URL . '/canciones');
     }
 
-    public function showUpdateSong($id){
+    public function showUpdateSong($id)
+    {
         $song = $this->model->getSongById($id);
         $this->view->renderModifyForm($song);
     }
 
-    public function modifySong(){
-        if(empty($_POST['title']) || empty($_POST['release_date']) || empty($_POST['album'])){
+    public function modifySong()
+    {
+        if (empty($_POST['title']) || empty($_POST['song'])) {
             $this->main_view->showError("Falta completar alguno de los campos", "administracion/songs");
             die();
         }
         $title = $_POST['title'];
-        $rel_date = $_POST['rel-date'];
-        $lyric = $_POST['lyric'];
+        $rel_date = ($_POST['rel-date'] !== "") ? $_POST['rel-date'] : null;
+        $lyric = (isset($_POST['lyric'])) ? $_POST['lyric'] : null;
         $id = $_POST['song'];
 
         $this->model->updateSong($title, $rel_date, $lyric, $id);
         header("Location: " . BASE_URL . "/canciones");
     }
-    
 }
