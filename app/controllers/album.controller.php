@@ -91,6 +91,7 @@ class Album_controller
 
     private function getAlbumFromPost()
     {
+<<<<<<< HEAD
         $flag = true;
         if ((empty($_POST['title'])) and (empty($_POST['artist'])) and (empty($_POST['rating'])))
             $this->main_view->showError('Falto ingresar algun dato', 'administracion/albums');
@@ -102,10 +103,15 @@ class Album_controller
                 //si esta seteada la ultima imagen pero no se subio imagen usamos la ultima subida
             } else
                 $img_url = null;
+=======
+        if(empty($_FILES['img'])){
+            $img_url = null;
+>>>>>>> 6edc17d41bd4b73013ede80145729adfb1e76b2d
             //Si esta vacio es porque no se subio imagen, si no se subio una imagen incorrecta
         }
         if ($_FILES['img']['type'] == "image/jpg" || $_FILES['img']['type'] == "image/jpeg" || $_FILES['img']['type'] == "image/png") {
             $img_url = $_FILES['img']['tmp_name'];
+<<<<<<< HEAD
         } else if ($flag) {
             $this->main_view->showError('Error al subir la imagen, archivo no soportado', 'administracion/albums');
             return null;
@@ -113,5 +119,17 @@ class Album_controller
         $album = new Album();
         $album->setValues($_POST['title'], $_POST['rel_date'], $_POST['review'], $_POST['artist'], $_POST['genre'], $_POST['rating'], $img_url);
         return $album;
+=======
+        } else{
+            $this->main_view->showError('Error al subir la imagen, archivo no soportado', 'administracion/albums');
+            return null;
+        }
+        if ((isset($_POST['title'])) and (isset($_POST['artist'])) and (isset($_POST['rating']))) {
+            $album = new Album();
+            $album->setValues($_POST['title'], $_POST['rel_date'], $_POST['review'], $_POST['artist'], $_POST['genre'], $_POST['rating'], $img_url);
+            return $album;
+        } else
+            $this->main_view->showError('Falto ingresar algun dato', 'administracion/albums');
+>>>>>>> 6edc17d41bd4b73013ede80145729adfb1e76b2d
     }
 }
