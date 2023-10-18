@@ -512,6 +512,10 @@ h3 .search_song_container{
     text-align: center;
 }
 
+tbody tr{
+    cursor: pointer;
+}
+
 /* estilos de display login */
 
 .login_container{

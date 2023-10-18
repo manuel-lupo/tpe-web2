@@ -68,8 +68,8 @@ class Album_controller
 
     public function addAlbum()
     {
-        $album = $this->getAlbumFromPost();
-        $id = $this->album_model->createAlbum($album);
+        $params = $this->getAlbumFromPost();
+        $id = $this->album_model->createAlbum($params[0]);
         if ($id)
             header("Location: " . BASE_URL . "/albums/$id");
         else
@@ -78,12 +78,12 @@ class Album_controller
 
     public function updateAlbum()
     {
-        if(empty($_POST['title']) and empty($_POST['rel_date']) and empty($_POST['rating'])){
+        if (empty($_POST['title']) and empty($_POST['rel_date']) and empty($_POST['rating'])) {
             $this->main_view->showError("Falto ingresar algun dato", "administracion/albums");
             die();
         }
-        $album = $this->getAlbumFromPost();
-        if ($album and $this->album_model->updateAlbum($_POST['album'], $album))
+        $params = $this->getAlbumFromPost();
+        if ($params and $this->album_model->updateAlbum($_POST['album'], $params[0] , $params[1]))
             header("Location: " . BASE_URL . "/albums/" . $_POST['album']);
         else
             $this->main_view->showError("Fallo la actualizacion del album", "administracion/albums");
@@ -91,45 +91,29 @@ class Album_controller
 
     private function getAlbumFromPost()
     {
-<<<<<<< HEAD
         $flag = true;
         if ((empty($_POST['title'])) and (empty($_POST['artist'])) and (empty($_POST['rating'])))
             $this->main_view->showError('Falto ingresar algun dato', 'administracion/albums');
 
         if ($_FILES['img']['size'] == 0) {
-            if(!empty($_POST['last_img_url'])){
+            if (!empty($_POST['last_img_url'])) {
                 $img_url = $_POST['last_img_url'];
                 $flag = false;
                 //si esta seteada la ultima imagen pero no se subio imagen usamos la ultima subida
             } else
                 $img_url = null;
-=======
-        if(empty($_FILES['img'])){
-            $img_url = null;
->>>>>>> 6edc17d41bd4b73013ede80145729adfb1e76b2d
             //Si esta vacio es porque no se subio imagen, si no se subio una imagen incorrecta
         }
         if ($_FILES['img']['type'] == "image/jpg" || $_FILES['img']['type'] == "image/jpeg" || $_FILES['img']['type'] == "image/png") {
             $img_url = $_FILES['img']['tmp_name'];
-<<<<<<< HEAD
-        } else if ($flag) {
-            $this->main_view->showError('Error al subir la imagen, archivo no soportado', 'administracion/albums');
-            return null;
+        } else {
+            if($flag){
+                $this->main_view->showError('Error al subir la imagen, archivo no soportado', 'administracion/albums');
+                die();
+            }
         }
         $album = new Album();
         $album->setValues($_POST['title'], $_POST['rel_date'], $_POST['review'], $_POST['artist'], $_POST['genre'], $_POST['rating'], $img_url);
-        return $album;
-=======
-        } else{
-            $this->main_view->showError('Error al subir la imagen, archivo no soportado', 'administracion/albums');
-            return null;
-        }
-        if ((isset($_POST['title'])) and (isset($_POST['artist'])) and (isset($_POST['rating']))) {
-            $album = new Album();
-            $album->setValues($_POST['title'], $_POST['rel_date'], $_POST['review'], $_POST['artist'], $_POST['genre'], $_POST['rating'], $img_url);
-            return $album;
-        } else
-            $this->main_view->showError('Falto ingresar algun dato', 'administracion/albums');
->>>>>>> 6edc17d41bd4b73013ede80145729adfb1e76b2d
+        return [$album, $flag];
     }
 }

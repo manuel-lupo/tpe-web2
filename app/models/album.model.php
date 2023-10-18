@@ -42,29 +42,40 @@ class Album_model
         }
     }
 
-    public function updateAlbum($id, Album $album)
+    public function updateAlbum($id, Album $album, $parseUrl)
     {
+        $img_url = ($parseUrl) ? $this->moveTempFile($album->getImgUrl()) : $album->getImgUrl();
         $query = $this->db->prepare('UPDATE `Albums` SET `title`= ?,`rel_date`=?,`review`=?,`artist`=?,`genre`=?,`rating`=? , `img_url` = ? WHERE id = ?');
-        return $query->execute([$album->getTitle(), $album->getRel_date(), $album->getReview(), $album->getArtist(), $album->getGenre(), $album->getRating(), $this->moveTempFile($album->getImgUrl()), $id]);
+        return $query->execute([$album->getTitle(),
+                    (!empty($album->getRel_date())) ? $album->getRel_date() : null,
+                    (!empty($album->getReview())) ? $album->getReview() : null,
+                    $album->getArtist(),
+                    (!empty($album->getGenre())) ? $album->getGenre() : null,
+                    (!empty($album->getRating())) ? $album->getRating() : null, 
+                    $img_url, 
+                    $id]);
     }
 
 
     public function createAlbum($album)
     {
-       try {
-        $query = $this->db->prepare("INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`, `img_url`) VALUES (?,?,?,?,?,?,?)");
-        $query->execute(
-            [$album->getTitle(),
-            (!empty($album->getRel_date())) ? $album->getRel_date() : null, 
-            (!empty($album->getReview())) ? $album->getReview() : null,
-            $album->getArtist(), 
-            (!empty($album->getGenre())) ? $album->getGenre() : null,
-            (!empty($album->getRating())) ? $album->getRating() : null, 
-            $this->moveTempFile($album->getImgUrl())]);
-        return $this->db->lastInsertId();
-       } catch (\Throwable $th) {
-        die($th);
-       }
+        try {
+            $query = $this->db->prepare("INSERT INTO `Albums`(`title`, `rel_date`, `review`, `artist`, `genre`, `rating`, `img_url`) VALUES (?,?,?,?,?,?,?)");
+            $query->execute(
+                [
+                    $album->getTitle(),
+                    (!empty($album->getRel_date())) ? $album->getRel_date() : null,
+                    (!empty($album->getReview())) ? $album->getReview() : null,
+                    $album->getArtist(),
+                    (!empty($album->getGenre())) ? $album->getGenre() : null,
+                    (!empty($album->getRating())) ? $album->getRating() : null,
+                    $this->moveTempFile($album->getImgUrl())
+                ]
+            );
+            return $this->db->lastInsertId();
+        } catch (\Throwable $th) {
+            die($th);
+        }
     }
 
     public function moveTempFile($url)
