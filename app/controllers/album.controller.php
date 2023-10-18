@@ -78,6 +78,10 @@ class Album_controller
 
     public function updateAlbum()
     {
+        if(empty($_POST['title']) and empty($_POST['rel_date']) and empty($_POST['rating'])){
+            $this->main_view->showError("Falto ingresar algun dato", "administracion/albums");
+            die();
+        }
         $album = $this->getAlbumFromPost();
         if ($album and $this->album_model->updateAlbum($_POST['album'], $album))
             header("Location: " . BASE_URL . "/albums/" . $_POST['album']);

@@ -14,4 +14,24 @@ function handleListeners(){
     })
     document.addEventListener('login_closed', handleListeners);
 }
+
+
+let delete_form = document.querySelector('#delete-selection');
+let modify_form = document.querySelector('.modify-panel');
+modify_form.addEventListener('submit' , function(e){
+    e.preventDefault()
+    let form = new FormData(this);
+    if(form.get('album') != null)
+        this.submit();
+})
+
+delete_form.addEventListener('submit' , function(e){
+    e.preventDefault()
+    let form = new FormData(this);
+    if(form.get('album') != null)
+        this.submit();
+})
+
+
+
 handleListeners()
